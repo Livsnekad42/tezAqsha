@@ -1,0 +1,14 @@
+h3 {
+  font-weight: lighter; }
+
+body {
+  color: green; }
+  body test {
+    color: red; }
+  body foo {
+    text-align: center; }
+
+.catalog {
+  background-color: red; }
+  .catalog .podcatalog {
+    color: rebeccapurple; }
