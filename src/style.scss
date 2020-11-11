@@ -37,7 +37,7 @@ header{
 main{
   height: 730px;
   display: flex;
-  background: url('https://3.downloader.disk.yandex.ru/preview/37bd894e0f11bca10af02492935ecf06dd084c4563c69788d8ff6d481d8942ec/inf/FjxiMik0BVlJ2ZJ1bjxwOlrWj02ckjxjXTs62Og1yzyYDdKN1I0tIc2EHuRSfVA9wCkcqCRK8gZ-REZXj2A_bg%3D%3D?uid=930330348&filename=bg-main.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=930330348&tknv=v2&size=1353x652');
+  background: url("../../src/img/bg-main.png");
   background-size: cover !important;
   .loan {
     .option-money{
@@ -100,7 +100,7 @@ main{
           padding: 9px;
           width: 50px;
           height: 50px;
-          background-image: url('https://2.downloader.disk.yandex.ru/preview/14630f5201eb6f33560f20e76924cc981a10872d322f34746f6ff2bee8b2145c/inf/jJdEyL8LleutdeF4H9HSilrWj02ckjxjXTs62Og1yzwbhPY0Y9GeXZmAF_D7Uh1pMvRV0VyE2obstDg6JQRHGA%3D%3D?uid=930330348&filename=scroll.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=930330348&tknv=v2&size=1353x652');
+          background-image: url("../../src/img/scroll.png");
           background-size: cover;
           cursor: pointer;
         }
@@ -193,7 +193,7 @@ main{
       position: absolute;
       width: 70px;
       height: 40px;
-      background: url('https://2.downloader.disk.yandex.ru/preview/8c734c9b8a74265e5a8462a6e21e9a69352e434906bf9e6ebdfd03350326b07f/inf/ZxdRVAmHxS-gr8RzU0JtLeMtaZujBzGey7RdWUTukyBATc4LKqKdLBxyycVgsEXXoH7p_oyWh1-8kaGRqALtyQ%3D%3D?uid=930330348&filename=marks.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=930330348&tknv=v2&size=1353x652');
+      background: url("../../src/img/about/marks.png");
       background-size: cover;
       top: -18%;
       left: 2%;
@@ -202,7 +202,7 @@ main{
       position: absolute;
       width: 70px;
       height: 40px;
-      background: url('https://2.downloader.disk.yandex.ru/preview/8c734c9b8a74265e5a8462a6e21e9a69352e434906bf9e6ebdfd03350326b07f/inf/ZxdRVAmHxS-gr8RzU0JtLeMtaZujBzGey7RdWUTukyBATc4LKqKdLBxyycVgsEXXoH7p_oyWh1-8kaGRqALtyQ%3D%3D?uid=930330348&filename=marks.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=930330348&tknv=v2&size=1353x652');
+      background: url("../../src/img/about/marks.png");
       background-size: cover;
       transform: rotate(180deg);
       top: 92%;
@@ -215,7 +215,7 @@ main{
     top: 65%;
     left: -2%;
     transform: translateY(-50%) rotate(180deg);
-    background: url('https://2.downloader.disk.yandex.ru/preview/d3944ff1dc1681db442cc887df8f15b3fb296dc46c1a71bbb0c2d3cb4c3e85e5/inf/rsOV2rn1bKmyMVYEfpNTmId1Z-eUjZmr70WOASGDIZuj9HgB6HX8rwq4wz5NGN4lrEdI6YrzJAyXt13_ssD0-Q%3D%3D?uid=930330348&filename=arrow.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=930330348&tknv=v2&size=1353x652') center center no-repeat;
+    background: url("../../src/img/about/arrow.png") center center no-repeat;
     background-size: cover;
     width: 38px;
     height: 70px;
@@ -228,7 +228,7 @@ main{
     top: 65%;
     right: -2%;
     transform: translateY(-50%);
-    background: url('https://2.downloader.disk.yandex.ru/preview/d3944ff1dc1681db442cc887df8f15b3fb296dc46c1a71bbb0c2d3cb4c3e85e5/inf/rsOV2rn1bKmyMVYEfpNTmId1Z-eUjZmr70WOASGDIZuj9HgB6HX8rwq4wz5NGN4lrEdI6YrzJAyXt13_ssD0-Q%3D%3D?uid=930330348&filename=arrow.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=930330348&tknv=v2&size=1353x652') center center no-repeat;
+    background: url("../../src/img/about/arrow.png") center center no-repeat;
     background-size: cover;
     width: 37px;
     height: 70px;
@@ -288,7 +288,7 @@ main{
 // SECTION COMPANY 
 
 .company {
-  background: url('https://1.downloader.disk.yandex.ru/preview/96003904d64dc16881c3ea82a64c26d404144ee1f5cf836b917afc1c802f2c5b/inf/65xA_6PvRAJii8xsX5I0jQ9QTUzTDZxOJqTvUndLSwcCfCnYO-huoLFr731krSNkODqOuMvkPvX41PwM2cVv-g%3D%3D?uid=930330348&filename=bg.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=930330348&tknv=v2&size=1353x652');
+  background: url("../../src/img/company/bg.png");
   background-size: cover !important;
   // .company__features
 
@@ -377,16 +377,20 @@ main{
     display: inline-block;
     position: absolute;
     top: -30%;
-    width: 40px;
-    height: 40px;
-    background: url(https://1.downloader.disk.yandex.ru/preview/b62cb6d…/inf/wnjd9seRhFvMp3-ezcqeeXxaYsFxsdo4Yttxwt1BYus25p7sjPYotCaRksnjW500dhHt6UbjwEZGSV-iuwbPXg%3D%3D?uid=930330348&filename=check.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=930330348&tknv=v2&size=1353x652);
+    width: 30px;
+    height: 30px;
+    background: url('../../src/img/company/icons/check.png');
     background-size: cover;
-    background-color: red;
+    // background-color: red;
   }
 
   // .card-company__text-lorem
 
   &__text-lorem {
+  }
+
+  &__text-red{
+    color: $bgCol;
   }
 }
 }
