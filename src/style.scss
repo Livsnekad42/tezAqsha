@@ -322,7 +322,7 @@ main{
       top: 20%;
       left: 50%;
       border-radius: 10px;
-      background-color: red;
+      background-color: $bgCol;
       
     }
     .image{
@@ -335,6 +335,17 @@ main{
       margin: 0 auto;
       margin-top: 15px;
       width: 750px;
+      &::before{
+        content: '';
+        position: absolute;
+        width: 450px;
+        height: 5px;
+        top: 15%;
+        left: 37%;
+        border-radius: 10px;
+        background-color: $bgCol;
+        
+      }
     }
     img{
       height: 100%;
