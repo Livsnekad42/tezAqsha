@@ -1,9 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Tez Aqsha</title>
+
+    <!-- Favicon -->
+
+    <link rel="icon" href="./favicon.png" type="image/x-icon">
+
+
+    <!-- Style and Bootstrap -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="./public/css/style.css">
+
 </head>
+
 <body>
+    <!-- HEADER -->
+
+    <header>
+        <div class="container">
+            <div class="row header">
+                <img src="./src/img/logo.png" alt="logo" class="logo col-4">
+                <button class="col-3 offset-5 button-take">Взять заём</button>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- MAIN SECTION -->
+
+    <main style="background: url('./src/img/bg-main.png')">
+        <div class="loan container">
+
+            <!-- SLIDERS -->
+
+            <div class="option-money row col-6 offset-3">
+
+            <!-- FIRST SLIDER -->
+
+                <div class="loan__item condition-sliders col-12">
+                    <div class="row">
+                        <div class="condition-sliders__text col-6">
+                            СУММА ЗАЙМА
+                        </div>
+                        <div class="condition-sliders__value col-6">
+                            0 тенге
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button class="condition-sliders__button-minus"> - </button>
+                        <input type="range" class="condition-sliders__input" min="1" max="100000" step="500">
+                        <button class="condition-sliders__button-plus"> + </button>
+                    </div>
+                </div>
+
+            <!-- SECOND SLIDER -->
+
+                <div class="loan__item condition-sliders col-12">
+                    <div class="row">
+                        <div class="condition-sliders__text col-6">
+                            СРОК ЗАЙМА
+                        </div>
+                        <div class="condition-sliders__value col-6">
+                            0 дней
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button class="condition-sliders__button-minus"> - </button>
+                        <input type="range" class="condition-sliders__input" min='1' max="60">
+                        <button class="condition-sliders__button-plus"> + </button>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <!-- CALCULATIONS -->
+
+            <div class="loan__item calculations row col-6 offset-3">
+                <p class="calculations__text">Возвращаете: <strong>12 000 тнг</strong> </p>
+                <p class="calculations__text">Дата возврата: <strong>21.10.2021</strong></p>
+                <button class="calculations__button-take-money">Получить деньги</button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FEATURES -->
+
+    <section class="advantages">
+        <div class="container">
+           <div class="features">
+            <div class="features__item col-4">
+                <img src="https://2.downloader.disk.yandex.ru/preview/1e5a81fbea6b6da50413c5106f33aba2ed7a0315b0e110c2b127fdd411b268f6/inf/EywUdn-AY3VhIbjzbHN3Em3C8bUe4wk32UehRoE9M9J2mcGAaRLvF1LRn9YbLx-Rauqs9CtQRD727gNX9KMGwA%3D%3D?uid=930330348&filename=1.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=930330348&tknv=v2&size=1353x652" alt="feature1">
+                <span>Мы быстро рассмотрим Вашу заявку и примем решение о предоставлении денежных средств выбранным вами способом</span>
+            </div>
+            <div class="features__item col-4">
+                <img src="https://2.downloader.disk.yandex.ru/preview/fe4949ddb6b3a5c0e7d0ce2ad71f9253bed61e67b6e636aa1f9ff3af41d64d80/inf/FDgY4Gh9SdN9i2KJkNcQqm3C8bUe4wk32UehRoE9M9LdtT3q3L_ZNPemLjAElOqEh8WAhbPgPF2IxoPs-8UYhg%3D%3D?uid=930330348&filename=2.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=930330348&tknv=v2&size=1353x652" alt="feature2">
+                <span>Клиенты должны помнить, что кредитная история влияет на одобрение</span>
+            </div>
+            <div class="features__item col-4">
+                <img src="https://4.downloader.disk.yandex.ru/preview/8e7899d00d9fda9111977d992ac716f582ddaaec81e0edba18ebd5787bbb7173/inf/lp1aHW9-ZNk3oRWBbznNKm3C8bUe4wk32UehRoE9M9JZl1gbn24dhidmnK_R2DVXfEN1L-80YkZLl-PwEkDERQ%3D%3D?uid=930330348&filename=3.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=930330348&tknv=v2&size=1353x652" alt="feature3">
+                <span>В TEZ AQSHA все условия получения займа открыты и прозрачны, Вам это понравится</span>
+            </div>
+           </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+
+    <div class="container">
+        <div class="row about">
+
+            <!-- ARROWS -->
+                <span class="about__arrow-prev"></span>
+                <span class="about__arrow-next"></span>
+
+            <!-- ABOUTS -->
+            
+            <div class="about__header">
+                <h2>Отзывы клиентов</h2>
+            </div>
+            <div class="about__slider carousel">
+
+                <div class="carousel__item col-5">
+                    
+                        <div class="about__marks-up"></div>
+                        <div class="about__marks-down"></div>
+                    
+                    <img src="https://2.downloader.disk.yandex.ru/preview/f66066fd6f788b4f46a5ee87cc8ab23ac5f7b87e055855359bab7c23cdc109a9/inf/8Y0bzMoqSA4zHfNktpIlQSQ4UQ87uAiYrWMsvW5B8SzMBsuKRU0Xh5RK-hqb5vaSKp7EdUkuebNBgtnY2q80JQ%3D%3D?uid=930330348&filename=photo.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=930330348&tknv=v2&size=1353x652" alt="Photo">
+                    <div>
+                        <p>
+                            <strong>Индира</strong> 
+                            г.Алматы
+                        </p>
+                        <span>Сотрудники Тез Акша обслуживают вежливо и быстро. Оформила займ на 
+                            точке за 10 минут и пошла 
+                            с наличными домой!</span>
+                    </div>
+                </div>
+
+                <div class="carousel__item col-5 offset-1">
+                   
+                        <div class="about__marks-up"></div>
+                        <div class="about__marks-down"></div>
+                    
+
+                    <img src="https://2.downloader.disk.yandex.ru/preview/f66066fd6f788b4f46a5ee87cc8ab23ac5f7b87e055855359bab7c23cdc109a9/inf/8Y0bzMoqSA4zHfNktpIlQSQ4UQ87uAiYrWMsvW5B8SzMBsuKRU0Xh5RK-hqb5vaSKp7EdUkuebNBgtnY2q80JQ%3D%3D?uid=930330348&filename=photo.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=930330348&tknv=v2&size=1353x652" alt="Photo">
+                    <div>
+                        <p>
+                            <strong>Жандос</strong> 
+                            г.Нур Султан
+                        </p>
+                        <span>Брал займ уже несколько 
+                            раз. О компании только 
+                            положительные 
+                            впечатления. Всегда идут 
+                            на встречу при большой 
+                            просрочке в трудных 
+                            жизненных ситуациях. </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 </body>
+
 </html>

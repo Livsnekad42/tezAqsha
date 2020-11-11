@@ -2,7 +2,7 @@
   "name": "tezaqsha",
   "version": "1.0.0",
   "description": "tezAqsha landing",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

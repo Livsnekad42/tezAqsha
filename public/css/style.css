@@ -1,14 +1,196 @@
 h3 {
   font-weight: lighter; }
 
-body {
-  color: green; }
-  body test {
-    color: red; }
-  body foo {
-    text-align: center; }
+html {
+  overflow-x: hidden; }
 
-.catalog {
-  background-color: red; }
-  .catalog .podcatalog {
-    color: rebeccapurple; }
+header {
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FF182F; }
+  header .logo {
+    height: 65px;
+    width: 370px; }
+  header .button-take {
+    width: 270px;
+    height: 75px;
+    background: linear-gradient(0deg, #000978 0%, #22339e 100%);
+    color: white;
+    font-size: 28px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold; }
+
+main {
+  height: 730px;
+  display: flex;
+  background-size: cover !important; }
+  main .loan .option-money {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  main .condition-sliders__text {
+    text-align: left;
+    font-size: 28px;
+    color: #22339E; }
+  main .condition-sliders__value {
+    text-align: right;
+    font-size: 28px;
+    font-weight: bold;
+    color: #FF182F; }
+  main .condition-sliders__button-minus {
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 50%;
+    background-color: #000978; }
+  main .condition-sliders__input {
+    -webkit-appearance: none;
+    margin-top: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 350px;
+    height: 20px;
+    padding: 0px;
+    background: linear-gradient(90deg, #000978 1%, #FF182F 100%);
+    border-radius: 15px; }
+    main .condition-sliders__input::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      padding: 9px;
+      width: 50px;
+      height: 50px;
+      background-image: url("https://2.downloader.disk.yandex.ru/preview/14630f5201eb6f33560f20e76924cc981a10872d322f34746f6ff2bee8b2145c/inf/jJdEyL8LleutdeF4H9HSilrWj02ckjxjXTs62Og1yzwbhPY0Y9GeXZmAF_D7Uh1pMvRV0VyE2obstDg6JQRHGA%3D%3D?uid=930330348&filename=scroll.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=930330348&tknv=v2&size=1353x652");
+      background-size: cover;
+      cursor: pointer; }
+    main .condition-sliders__input:focus {
+      outline: none; }
+  main .condition-sliders__button-plus {
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 50%;
+    background-color: #FF182F;
+    color: white;
+    font-size: 25px; }
+  main .calculations {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; }
+    main .calculations__text {
+      font-size: 25px;
+      color: #000978;
+      margin: 0;
+      padding: 0; }
+    main .calculations__button-take-money {
+      width: 500px;
+      height: 70px;
+      font-size: 25px;
+      margin-top: 40px;
+      background: #FF182F;
+      border: none;
+      color: white;
+      border-radius: 15px; }
+
+.advantages {
+  background-color: #E5E9F4;
+  padding-bottom: 100px; }
+
+.features {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px; }
+  .features__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 0;
+    min-width: 300px; }
+    .features__item img {
+      width: auto;
+      height: 150px;
+      max-height: 160px;
+      margin-bottom: 40px; }
+    .features__item span {
+      color: #2431A5;
+      font-size: 23px; }
+
+.about {
+  position: relative;
+  margin-bottom: 100px; }
+  .about__marks-up {
+    position: absolute;
+    width: 70px;
+    height: 40px;
+    background: url("https://2.downloader.disk.yandex.ru/preview/8c734c9b8a74265e5a8462a6e21e9a69352e434906bf9e6ebdfd03350326b07f/inf/ZxdRVAmHxS-gr8RzU0JtLeMtaZujBzGey7RdWUTukyBATc4LKqKdLBxyycVgsEXXoH7p_oyWh1-8kaGRqALtyQ%3D%3D?uid=930330348&filename=marks.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=930330348&tknv=v2&size=1353x652");
+    background-size: cover;
+    top: -30%;
+    left: 1%; }
+  .about__marks-down {
+    position: absolute;
+    width: 70px;
+    height: 40px;
+    background: url("https://2.downloader.disk.yandex.ru/preview/8c734c9b8a74265e5a8462a6e21e9a69352e434906bf9e6ebdfd03350326b07f/inf/ZxdRVAmHxS-gr8RzU0JtLeMtaZujBzGey7RdWUTukyBATc4LKqKdLBxyycVgsEXXoH7p_oyWh1-8kaGRqALtyQ%3D%3D?uid=930330348&filename=marks.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=930330348&tknv=v2&size=1353x652");
+    background-size: cover;
+    transform: rotate(180deg);
+    top: 110%;
+    left: 85%; }
+  .about__arrow-prev {
+    position: absolute;
+    top: 65%;
+    left: -8%;
+    transform: translateY(-50%) rotate(180deg);
+    background: url("https://2.downloader.disk.yandex.ru/preview/d3944ff1dc1681db442cc887df8f15b3fb296dc46c1a71bbb0c2d3cb4c3e85e5/inf/rsOV2rn1bKmyMVYEfpNTmId1Z-eUjZmr70WOASGDIZuj9HgB6HX8rwq4wz5NGN4lrEdI6YrzJAyXt13_ssD0-Q%3D%3D?uid=930330348&filename=arrow.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=930330348&tknv=v2&size=1353x652") center center no-repeat;
+    background-size: cover;
+    width: 38px;
+    height: 70px; }
+  .about__arrow-next {
+    position: absolute;
+    top: 65%;
+    right: -8%;
+    transform: translateY(-50%);
+    background: url("https://2.downloader.disk.yandex.ru/preview/d3944ff1dc1681db442cc887df8f15b3fb296dc46c1a71bbb0c2d3cb4c3e85e5/inf/rsOV2rn1bKmyMVYEfpNTmId1Z-eUjZmr70WOASGDIZuj9HgB6HX8rwq4wz5NGN4lrEdI6YrzJAyXt13_ssD0-Q%3D%3D?uid=930330348&filename=arrow.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=930330348&tknv=v2&size=1353x652") center center no-repeat;
+    background-size: cover;
+    width: 37px;
+    height: 70px; }
+  .about__header {
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000978; }
+    .about__header h2 {
+      font-weight: bold; }
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .carousel__item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin-bottom: 100px; }
+    .carousel__item img {
+      width: 120px;
+      height: 120px;
+      min-width: 120px;
+      min-height: 120px;
+      margin-right: 50px;
+      margin-top: 10px; }
+    .carousel__item p {
+      font-size: 22px;
+      color: #FF182F; }
+    .carousel__item span {
+      font-size: 22px;
+      font-style: italic;
+      color: #000978; }
