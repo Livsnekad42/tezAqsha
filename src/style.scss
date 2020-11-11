@@ -288,6 +288,7 @@ main{
 // SECTION COMPANY 
 
 .company {
+  padding-bottom: 40px;
   background: url("../../src/img/company/bg.png");
   background-size: cover !important;
   // .company__features
@@ -307,7 +308,6 @@ main{
   display: grid;
   grid-template-columns: 1fr 1fr;
   // .wrap__item
-
   &__item {
     position: relative;
     display: flex;
@@ -323,6 +323,7 @@ main{
       left: 50%;
       border-radius: 10px;
       background-color: red;
+      
     }
     .image{
       margin-top: 20px;
@@ -332,24 +333,8 @@ main{
     &-long{
       grid-column: 1/3;
       margin: 0 auto;
-      margin-top: -30px;
+      margin-top: 15px;
       width: 750px;
-      &__text {
-        position: relative;
-        margin-top: 80px;
-        margin-left: 65px;
-        font-size: 20px;
-        color: $btnBgCol0ne;
-        &::before{
-          content: '';
-          position: absolute;
-          width: 470px !important;
-          height: 5px;
-          top: -34% !important;
-          left: 15% !important;
-          border-radius: 10px;
-          background-color: red;
-        }
     }
     img{
       height: 100%;
@@ -394,6 +379,84 @@ main{
   }
 }
 }
+
+// SECTION FOOTER
+
+.footer {
+  min-height: 180px;
+  padding-top: 50px;
+  background-color: $bgCol;
+  color: white;
+  font-size: 22px;
+
+  // .footer__item
+  .call{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: row;
+    img{
+      margin-top: 15px;
+    }
+  }
+  &__item {
+    min-height: 150px;
+  }
+  img{
+    max-width: 320px;
+    margin-bottom: 100px;
+  }
+  span{
+    display: block;
+  }
+
+  // .footer__item-list
+
+  &__item-list {
+  }
 }
+.text {
+
+  // .text__number
+
+  &__number {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 34px;
+    color: $btnBgColTwo;
+  }
+
+  // .text__lorem
+
+  &__lorem {
+    font-size: 16px;
+  }
+}
+.list {
+  margin-left: 90px;
+  line-height: 35px;
+  list-style-type: none;
+  color: white;
+
+  // .list__item
+
+  &__item {
+    margin-bottom: 5px;
+    font-size: 18px;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+  // .list__item-blue
+
+  &__item-blue {
+    a {
+      color: $btnBgColTwo;
+    }
+  }
+}
+
 
 
