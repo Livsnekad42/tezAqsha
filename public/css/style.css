@@ -1,3 +1,4 @@
+@charset "UTF-8";
 h3 {
   font-weight: lighter; }
 
@@ -204,3 +205,75 @@ main {
       font-size: 22px;
       font-style: italic;
       color: #000978; }
+
+.company {
+  background: url("https://1.downloader.disk.yandex.ru/preview/96003904d64dc16881c3ea82a64c26d404144ee1f5cf836b917afc1c802f2c5b/inf/65xA_6PvRAJii8xsX5I0jQ9QTUzTDZxOJqTvUndLSwcCfCnYO-huoLFr731krSNkODqOuMvkPvX41PwM2cVv-g%3D%3D?uid=930330348&filename=bg.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=930330348&tknv=v2&size=1353x652");
+  background-size: cover !important; }
+  .company__header {
+    padding-top: 100px;
+    margin-bottom: 40px;
+    font-weight: bolder;
+    color: #FF182F;
+    font-size: 34px;
+    text-align: center;
+    text-transform: uppercase; }
+  .company .wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+    .company .wrap__item {
+      position: relative;
+      display: flex;
+      min-height: 250px;
+      width: 570px;
+      margin-left: 20px; }
+      .company .wrap__item::before {
+        content: '';
+        position: absolute;
+        width: 250px;
+        height: 5px;
+        top: 20%;
+        left: 50%;
+        border-radius: 10px;
+        background-color: red; }
+      .company .wrap__item .image {
+        margin-top: 20px;
+        height: 120px;
+        min-width: 125px; }
+      .company .wrap__item-long {
+        grid-column: 1/3;
+        margin: 0 auto;
+        margin-top: -30px;
+        width: 750px; }
+        .company .wrap__item-long__text {
+          position: relative;
+          margin-top: 80px;
+          margin-left: 65px;
+          font-size: 20px;
+          color: #22339E; }
+          .company .wrap__item-long__text::before {
+            content: '';
+            position: absolute;
+            width: 470px !important;
+            height: 5px;
+            top: -34% !important;
+            left: 15% !important;
+            border-radius: 10px;
+            background-color: red; }
+        .company .wrap__item-long img {
+          height: 100%;
+          width: auto; }
+    .company .wrap .card-company__text {
+      position: relative;
+      margin-top: 80px;
+      margin-left: 65px;
+      font-size: 20px;
+      color: #22339E; }
+    .company .wrap .card-company__text-check {
+      display: inline-block;
+      position: absolute;
+      top: -30%;
+      width: 40px;
+      height: 40px;
+      background: url(https://1.downloader.disk.yandex.ru/preview/b62cb6d…/inf/wnjd9seRhFvMp3-ezcqeeXxaYsFxsdo4Yttxwt1BYus25p7sjPYotCaRksnjW500dhHt6UbjwEZGSV-iuwbPXg%3D%3D?uid=930330348&filename=check.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=930330348&tknv=v2&size=1353x652);
+      background-size: cover;
+      background-color: red; }
