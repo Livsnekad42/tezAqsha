@@ -22,25 +22,31 @@ header {
     text-transform: uppercase;
     border: none;
     border-radius: 15px;
-    font-weight: bold; }
+    font-weight: bold;
+    margin-left: 475px; }
 
 main {
   height: 730px;
   display: flex;
+  background: url("https://3.downloader.disk.yandex.ru/preview/37bd894e0f11bca10af02492935ecf06dd084c4563c69788d8ff6d481d8942ec/inf/FjxiMik0BVlJ2ZJ1bjxwOlrWj02ckjxjXTs62Og1yzyYDdKN1I0tIc2EHuRSfVA9wCkcqCRK8gZ-REZXj2A_bg%3D%3D?uid=930330348&filename=bg-main.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=930330348&tknv=v2&size=1353x652");
   background-size: cover !important; }
   main .loan .option-money {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 350px;
-    margin-top: 20px;
-    margin-bottom: 20px; }
+    width: 600px;
+    margin-top: 55px;
+    margin-bottom: 70px;
+    margin-left: 300px; }
   main .condition-sliders__text {
     text-align: left;
+    transform: translateY(-25px);
     font-size: 28px;
     color: #22339E; }
   main .condition-sliders__value {
     text-align: right;
+    transform: translateY(-25px);
     font-size: 28px;
     font-weight: bold;
     color: #FF182F; }
@@ -53,9 +59,9 @@ main {
   main .condition-sliders__input {
     -webkit-appearance: none;
     margin-top: 25px;
-    margin-left: 5px;
-    margin-right: 5px;
-    width: 350px;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 370px;
     height: 20px;
     padding: 0px;
     background: linear-gradient(90deg, #000978 1%, #FF182F 100%);
@@ -88,14 +94,16 @@ main {
       margin: 0;
       padding: 0; }
     main .calculations__button-take-money {
-      width: 500px;
+      width: 575px;
       height: 70px;
-      font-size: 25px;
       margin-top: 40px;
-      background: #FF182F;
       border: none;
+      border-radius: 15px;
+      background: #FF182F;
       color: white;
-      border-radius: 15px; }
+      font-size: 28px;
+      font-weight: bold;
+      text-transform: uppercase; }
 
 .advantages {
   background-color: #E5E9F4;
@@ -130,8 +138,8 @@ main {
     height: 40px;
     background: url("https://2.downloader.disk.yandex.ru/preview/8c734c9b8a74265e5a8462a6e21e9a69352e434906bf9e6ebdfd03350326b07f/inf/ZxdRVAmHxS-gr8RzU0JtLeMtaZujBzGey7RdWUTukyBATc4LKqKdLBxyycVgsEXXoH7p_oyWh1-8kaGRqALtyQ%3D%3D?uid=930330348&filename=marks.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=930330348&tknv=v2&size=1353x652");
     background-size: cover;
-    top: -30%;
-    left: 1%; }
+    top: -18%;
+    left: 2%; }
   .about__marks-down {
     position: absolute;
     width: 70px;
@@ -139,12 +147,12 @@ main {
     background: url("https://2.downloader.disk.yandex.ru/preview/8c734c9b8a74265e5a8462a6e21e9a69352e434906bf9e6ebdfd03350326b07f/inf/ZxdRVAmHxS-gr8RzU0JtLeMtaZujBzGey7RdWUTukyBATc4LKqKdLBxyycVgsEXXoH7p_oyWh1-8kaGRqALtyQ%3D%3D?uid=930330348&filename=marks.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=930330348&tknv=v2&size=1353x652");
     background-size: cover;
     transform: rotate(180deg);
-    top: 110%;
-    left: 85%; }
+    top: 92%;
+    left: 78%; }
   .about__arrow-prev {
     position: absolute;
     top: 65%;
-    left: -8%;
+    left: -2%;
     transform: translateY(-50%) rotate(180deg);
     background: url("https://2.downloader.disk.yandex.ru/preview/d3944ff1dc1681db442cc887df8f15b3fb296dc46c1a71bbb0c2d3cb4c3e85e5/inf/rsOV2rn1bKmyMVYEfpNTmId1Z-eUjZmr70WOASGDIZuj9HgB6HX8rwq4wz5NGN4lrEdI6YrzJAyXt13_ssD0-Q%3D%3D?uid=930330348&filename=arrow.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=930330348&tknv=v2&size=1353x652") center center no-repeat;
     background-size: cover;
@@ -153,7 +161,7 @@ main {
   .about__arrow-next {
     position: absolute;
     top: 65%;
-    right: -8%;
+    right: -2%;
     transform: translateY(-50%);
     background: url("https://2.downloader.disk.yandex.ru/preview/d3944ff1dc1681db442cc887df8f15b3fb296dc46c1a71bbb0c2d3cb4c3e85e5/inf/rsOV2rn1bKmyMVYEfpNTmId1Z-eUjZmr70WOASGDIZuj9HgB6HX8rwq4wz5NGN4lrEdI6YrzJAyXt13_ssD0-Q%3D%3D?uid=930330348&filename=arrow.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=930330348&tknv=v2&size=1353x652") center center no-repeat;
     background-size: cover;
@@ -161,13 +169,14 @@ main {
     height: 70px; }
   .about__header {
     width: 100%;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 60px;
+    margin-bottom: 75px;
     font-size: 40px;
     text-align: center;
     text-transform: uppercase;
     color: #000978; }
     .about__header h2 {
+      font-size: 40px;
       font-weight: bold; }
 
 .carousel {
@@ -178,8 +187,9 @@ main {
     position: relative;
     display: flex;
     justify-content: center;
-    width: 50%;
-    margin-bottom: 100px; }
+    width: 600px;
+    min-height: 300px;
+    margin-left: 10px; }
     .carousel__item img {
       width: 120px;
       height: 120px;
