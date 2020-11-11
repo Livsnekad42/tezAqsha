@@ -76,11 +76,20 @@ main{
       // .condition-sliders__button-minus
   
       &__button-minus {
+        display: flex;
+        justify-content: center;
+        padding-top: 22px;
         width: 70px;
         height: 70px;
         border: none;
         border-radius: 50%;
         background-color: $btnBgColTwo;
+        color: white;
+        line-height: 1px;
+        font-size: 100px;
+        &:focus{
+          outline: none;
+        }
       }
   
       // .condition-sliders__input
@@ -112,13 +121,20 @@ main{
       // .condition-sliders__button-plus
   
       &__button-plus {
+        display: flex;
+        justify-content: center;
+        padding-top: 27px;
         width: 70px;
         height: 70px;
         border: none;
         border-radius: 50%;
         background-color: $bgCol;
         color: white;
-        font-size: 25px;
+        line-height: 1px;
+        font-size: 70px;
+        &:focus{
+          outline: none;
+        }
       }
   }
   .calculations {

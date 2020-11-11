@@ -51,11 +51,19 @@ main {
     font-weight: bold;
     color: #FF182F; }
   main .condition-sliders__button-minus {
+    display: flex;
+    justify-content: center;
+    padding-top: 22px;
     width: 70px;
     height: 70px;
     border: none;
     border-radius: 50%;
-    background-color: #000978; }
+    background-color: #000978;
+    color: white;
+    line-height: 1px;
+    font-size: 100px; }
+    main .condition-sliders__button-minus:focus {
+      outline: none; }
   main .condition-sliders__input {
     -webkit-appearance: none;
     margin-top: 25px;
@@ -77,13 +85,19 @@ main {
     main .condition-sliders__input:focus {
       outline: none; }
   main .condition-sliders__button-plus {
+    display: flex;
+    justify-content: center;
+    padding-top: 27px;
     width: 70px;
     height: 70px;
     border: none;
     border-radius: 50%;
     background-color: #FF182F;
     color: white;
-    font-size: 25px; }
+    line-height: 1px;
+    font-size: 70px; }
+    main .condition-sliders__button-plus:focus {
+      outline: none; }
   main .calculations {
     display: flex;
     justify-content: center;
