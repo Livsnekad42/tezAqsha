@@ -122,26 +122,25 @@ main {
 .advantages {
   background-color: #E5E9F4;
   padding-bottom: 100px; }
-
-.features {
-  display: flex;
-  justify-content: center;
-  padding-top: 100px; }
-  .features__item {
+  .advantages .features {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 0;
-    min-width: 300px; }
-    .features__item img {
-      width: auto;
-      height: 150px;
-      max-height: 160px;
-      margin-bottom: 40px; }
-    .features__item span {
-      color: #2431A5;
-      font-size: 23px; }
+    justify-content: center;
+    padding-top: 100px; }
+    .advantages .features__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 0;
+      min-width: 300px; }
+      .advantages .features__item img {
+        width: auto;
+        height: 150px;
+        max-height: 160px;
+        margin-bottom: 40px; }
+      .advantages .features__item span {
+        color: #2431A5;
+        font-size: 23px; }
 
 .about {
   position: relative;
@@ -195,6 +194,7 @@ main {
 
 .carousel {
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center; }
   .carousel__item {
@@ -223,6 +223,8 @@ main {
   padding-bottom: 40px;
   background: url("../../src/img/company/bg.png");
   background-size: cover !important; }
+  .company__features {
+    width: 100%; }
   .company__header {
     padding-top: 100px;
     margin-bottom: 40px;
@@ -238,7 +240,7 @@ main {
       position: relative;
       display: flex;
       min-height: 250px;
-      width: 570px;
+      max-width: 570px;
       margin-left: 20px; }
       .company .wrap__item::before {
         content: '';
@@ -261,10 +263,10 @@ main {
         .company .wrap__item-long::before {
           content: '';
           position: absolute;
-          width: 450px;
+          width: 400px;
           height: 5px;
           top: 15%;
-          left: 37%;
+          left: 45%;
           border-radius: 10px;
           background-color: #FF182F; }
       .company .wrap__item img {
@@ -328,3 +330,59 @@ main {
         text-decoration: none; }
     .footer .list__item-blue a {
       color: #000978; }
+
+@media (max-width: 1024px) {
+  header {
+    height: auto; }
+    header .header .logo {
+      height: 50px;
+      margin-left: 10px;
+      margin-top: 50px;
+      margin-bottom: 25px; }
+    header .header .button-take {
+      margin-top: -90px;
+      margin-left: 600px;
+      font-size: 23px; }
+  .loan .option-money {
+    margin: 55px auto 75px auto !important; }
+  .calculations__button-take-money {
+    width: 100% !important; }
+  .advantages .features__item span {
+    font-size: 20px !important; }
+  .carousel p {
+    font-size: 20px; }
+  .carousel__item span {
+    font-size: 18px; }
+  .carousel__item img {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    min-height: 80px;
+    margin-right: 10px; }
+  .company .card-company__text {
+    font-size: 19px;
+    margin-top: 50px;
+    margin-left: 55px; }
+    .company .card-company__text-check {
+      top: -15%;
+      left: -5%; }
+  .company .wrap__item .image {
+    height: 100px;
+    min-width: 80px; }
+  .company .wrap__item::before {
+    top: 10%;
+    left: 50%;
+    width: 170px; }
+  .company .wrap__item-long::before {
+    top: 15%;
+    left: 30%;
+    width: 350px; }
+  .footer img {
+    max-width: 220px; }
+  .footer .text__number {
+    font-size: 20px; }
+  .footer .text__lorem {
+    font-size: 14px; }
+  .footer .list {
+    line-height: 20px;
+    margin: 0; } }
