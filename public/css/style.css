@@ -36,9 +36,7 @@ main {
     align-items: center;
     height: 350px;
     width: 600px;
-    margin-top: 55px;
-    margin-bottom: 70px;
-    margin-left: 300px; }
+    margin: 55px auto 70px auto; }
   main .condition-sliders__text {
     text-align: left;
     transform: translateY(-25px);
@@ -108,9 +106,9 @@ main {
       margin: 0;
       padding: 0; }
     main .calculations__button-take-money {
-      width: 575px;
+      width: 600px;
       height: 70px;
-      margin-top: 40px;
+      margin: 40px auto 0px auto;
       border: none;
       border-radius: 15px;
       background: #FF182F;
@@ -151,8 +149,8 @@ main {
     height: 40px;
     background: url("../../src/img/about/marks.png");
     background-size: cover;
-    top: -18%;
-    left: 2%; }
+    top: 0%;
+    left: -2%; }
   .about__marks-down {
     position: absolute;
     width: 70px;
@@ -160,8 +158,8 @@ main {
     background: url("../../src/img/about/marks.png");
     background-size: cover;
     transform: rotate(180deg);
-    top: 92%;
-    left: 78%; }
+    top: 88%;
+    left: 73%; }
   .about__arrow-prev {
     position: absolute;
     top: 65%;
@@ -202,8 +200,9 @@ main {
     display: flex;
     justify-content: center;
     width: 600px;
-    min-height: 300px;
-    margin-left: 10px; }
+    min-height: 400px !important;
+    margin-left: 10px;
+    padding-top: 40px; }
     .carousel__item img {
       width: 120px;
       height: 120px;
@@ -331,24 +330,36 @@ main {
     .footer .list__item-blue a {
       color: #000978; }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 901px) {
   header {
     height: auto; }
     header .header .logo {
       height: 50px;
+      width: auto;
       margin-left: 10px;
       margin-top: 50px;
       margin-bottom: 25px; }
     header .header .button-take {
+      min-width: 300px;
       margin-top: -90px;
-      margin-left: 600px;
+      margin-left: 70%;
       font-size: 23px; }
   .loan .option-money {
-    margin: 55px auto 75px auto !important; }
-  .calculations__button-take-money {
-    width: 100% !important; }
-  .advantages .features__item span {
-    font-size: 20px !important; }
+    margin: 55px auto 15px auto !important; }
+  .calculations {
+    text-align: center; }
+    .calculations__button-take-money {
+      width: 80% !important; }
+  .advantages .features {
+    padding-top: 0;
+    flex-direction: column; }
+    .advantages .features__item {
+      margin: 30px auto;
+      max-width: 60%; }
+      .advantages .features__item img {
+        min-height: 150px; }
+      .advantages .features__item span {
+        font-size: 22px !important; }
   .carousel p {
     font-size: 20px; }
   .carousel__item span {
@@ -386,3 +397,263 @@ main {
   .footer .list {
     line-height: 20px;
     margin: 0; } }
+
+@media (max-width: 900px) and (min-width: 425px) {
+  header {
+    height: auto; }
+    header .header .logo {
+      width: auto;
+      display: block;
+      margin: 30px auto; }
+    header .header .button-take {
+      display: block;
+      margin: 30px auto; }
+  main .condition-sliders .row {
+    margin: auto; }
+  main .condition-sliders__input {
+    width: 50%; }
+  main .condition-sliders__button-minus {
+    width: 60px;
+    height: 60px;
+    padding-top: 17px;
+    transform: scale(0.9); }
+  main .condition-sliders__button-plus {
+    width: 60px;
+    height: 60px;
+    padding-top: 23px;
+    transform: scale(0.9); }
+  main .condition-sliders__text {
+    transform: translateY(-15px);
+    font-size: 22px; }
+  main .condition-sliders__value {
+    transform: translateY(-15px);
+    font-size: 24px; }
+  main .loan__item {
+    margin-bottom: 50px; }
+    main .loan__item .row {
+      display: flex;
+      justify-content: center; }
+  main .loan .option-money {
+    width: auto;
+    height: auto;
+    margin: 40px auto;
+    padding: 0; }
+  main .calculations__button-take-money {
+    width: 100%;
+    font-size: 26px; }
+  .advantages .features {
+    padding: 0;
+    flex-direction: column; }
+    .advantages .features__item {
+      margin: 20px auto;
+      max-width: 80%; }
+    .advantages .features img {
+      height: 125px; }
+    .advantages .features span {
+      font-size: 18px !important; }
+  .about__header h2 {
+    font-size: 34px; }
+  .about .carousel__item {
+    padding: 70px 20px; }
+  .company .wrap {
+    display: flex;
+    flex-direction: column; }
+    .company .wrap__item {
+      max-width: 100%;
+      width: 100%;
+      margin: auto; }
+      .company .wrap__item .image {
+        height: 100px;
+        margin-top: 75px; }
+      .company .wrap__item::before {
+        width: 380px;
+        top: 25%;
+        left: 30%; }
+      .company .wrap__item-long {
+        width: auto; }
+        .company .wrap__item-long::before {
+          width: 380px;
+          height: 5px;
+          top: 25%;
+          left: 30%; }
+  .company .card-company__text {
+    margin-left: 5px; }
+    .company .card-company__text-check {
+      top: -20%; }
+  .footer {
+    text-align: center; }
+    .footer__item {
+      min-height: 100px; }
+    .footer .list {
+      margin: 0 !important;
+      padding: 0;
+      text-align: center;
+      line-height: normal; }
+    .footer img {
+      margin-bottom: 10px; } }
+
+@media (max-width: 424px) {
+  header {
+    height: auto; }
+    header .header .logo {
+      width: 80%;
+      height: auto;
+      display: block;
+      margin: 30px auto 15px auto; }
+    header .header .button-take {
+      display: block;
+      height: 60px;
+      margin: 0px auto 25px; }
+  main {
+    height: auto; }
+    main .condition-sliders .row {
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    main .condition-sliders__input {
+      width: 60%;
+      height: 10px;
+      margin: auto;
+      padding: 0; }
+    main .condition-sliders__button-minus {
+      width: 40px;
+      height: 40px;
+      padding-top: 7px;
+      transform: scale(0.9); }
+    main .condition-sliders__button-plus {
+      width: 40px;
+      height: 40px;
+      padding-top: 12px;
+      font-size: 52px;
+      transform: scale(0.9); }
+    main .condition-sliders__text {
+      transform: translateY(-15px);
+      font-size: 16px; }
+    main .condition-sliders__value {
+      transform: translateY(-15px);
+      font-size: 22px; }
+    main .loan__item {
+      margin-bottom: 30px;
+      padding: 0; }
+    main .loan .option-money {
+      width: auto;
+      height: auto;
+      margin: 60px auto 20px auto;
+      padding: 0px 20px; }
+    main .calculations__text {
+      font-size: 16px; }
+    main .calculations__button-take-money {
+      width: 100%;
+      margin-top: 15px;
+      height: 50px;
+      font-size: 20px; }
+  .advantages {
+    padding-bottom: 0px; }
+    .advantages .features {
+      padding: 0;
+      padding-top: 70px;
+      flex-direction: column; }
+      .advantages .features__item {
+        margin: 20px auto;
+        max-width: 80%; }
+      .advantages .features img {
+        height: 125px; }
+      .advantages .features span {
+        font-size: 18px !important; }
+  .about__header h2 {
+    font-size: 36px; }
+  .about .carousel__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 20px 70px 20px;
+    text-align: center; }
+    .about .carousel__item img {
+      margin: auto;
+      margin-bottom: 20px; }
+    .about .carousel__item p {
+      font-size: 28px; }
+    .about .carousel__item span {
+      font-size: 20px; }
+  .company .header {
+    padding-top: 25px;
+    margin-bottom: 0px; }
+  .company .wrap {
+    display: flex;
+    flex-direction: column; }
+    .company .wrap__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 20px;
+      text-align: center;
+      padding: 0px;
+      margin: 0px; }
+      .company .wrap__item .image {
+        height: 100px;
+        margin-top: 0px; }
+      .company .wrap__item::before {
+        display: none; }
+      .company .wrap__item-long {
+        width: auto; }
+        .company .wrap__item-long::before {
+          display: none; }
+  .company .card-company__text {
+    font-size: 19px;
+    margin-left: 0px; }
+    .company .card-company__text-check {
+      top: -35%;
+      left: 45%; }
+  .footer {
+    text-align: center; }
+    .footer__item {
+      min-height: 100px; }
+    .footer img {
+      width: 80%;
+      margin-bottom: 10px; }
+    .footer .list {
+      margin: 0 !important;
+      padding: 0;
+      text-align: center;
+      line-height: normal; }
+    .footer .call img {
+      width: 15%; }
+    .footer .text__number {
+      font-size: 28px; }
+  .next {
+    top: 100% !important;
+    right: 30% !important;
+    width: auto !important;
+    height: auto !important; }
+  .prev {
+    top: 100% !important;
+    left: 30% !important;
+    width: auto !important;
+    height: auto !important; } }
+
+/* Arrows */
+.prev {
+  content: '';
+  position: absolute;
+  top: 45%;
+  left: -5%;
+  transform: translateY(-50%) rotate(180deg);
+  background: url("../../src/img/about/arrow.png") center center no-repeat;
+  background-size: cover;
+  width: 38px;
+  height: 70px;
+  border: none; }
+
+.next {
+  position: absolute;
+  top: 45%;
+  right: -5%;
+  transform: translateY(-50%);
+  background: url("../../src/img/about/arrow.png") center center no-repeat;
+  background-size: cover;
+  width: 38px;
+  height: 70px;
+  border: none; }

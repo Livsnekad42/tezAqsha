@@ -49,9 +49,7 @@ main {
       align-items: center;
       height: 350px;
       width: 600px;
-      margin-top: 55px;
-      margin-bottom: 70px;
-      margin-left: 300px;
+      margin: 55px auto 70px auto;
     }
   }
 
@@ -159,9 +157,9 @@ main {
 
     // .calculations__button-take-money
     &__button-take-money {
-      width: 575px;
+      width: 600px;
       height: 70px;
-      margin-top: 40px;
+      margin: 40px auto 0px auto;
       border: none;
       border-radius: 15px;
       background: $bgCol;
@@ -224,8 +222,8 @@ main {
       height: 40px;
       background: url("../../src/img/about/marks.png");
       background-size: cover;
-      top: -18%;
-      left: 2%;
+      top: 0%;
+      left: -2%;
     }
 
     &-down {
@@ -235,8 +233,8 @@ main {
       background: url("../../src/img/about/marks.png");
       background-size: cover;
       transform: rotate(180deg);
-      top: 92%;
-      left: 78%;
+      top: 88%;
+      left: 73%;
     }
   }
 
@@ -297,8 +295,9 @@ main {
     display: flex;
     justify-content: center;
     width: 600px;
-    min-height: 300px;
+    min-height: 400px !important;
     margin-left: 10px;
+    padding-top: 40px;
 
     img {
       width: 120px;
@@ -529,21 +528,23 @@ main {
 // TABLET
 
 
-@media(max-width:1024px) {
+@media(max-width:1024px) and (min-width:901px) {
   header {
     height: auto;
 
     .header {
       .logo {
         height: 50px;
+        width: auto;
         margin-left: 10px;
         margin-top: 50px;
         margin-bottom: 25px;
       }
 
       .button-take {
+        min-width: 300px;
         margin-top: -90px;
-        margin-left: 600px;
+        margin-left: 70%;
         font-size: 23px;
       }
     }
@@ -551,26 +552,35 @@ main {
 
   .loan {
       // .loan__item
-    &__item {}
+    &__item {
+    }
     .option-money {
-      margin: 55px auto 75px auto !important;
+      margin: 55px auto 15px auto !important;
     }
   }
   .calculations {
+    text-align: center;
     // .calculations__button-take-money
 
     &__button-take-money {
-      width: 100% !important;
+      width: 80% !important;
     }
   }
 
 
   .advantages {
   .features {
+    padding-top: 0;
+    flex-direction: column;
       // .features__item
       &__item {
+        margin: 30px auto;
+        max-width: 60%;
+        img{
+          min-height: 150px;
+        }
         span {
-          font-size: 20px !important;
+          font-size: 22px !important;
         }
       }
   }
@@ -623,9 +633,7 @@ main {
         width: 170px;
       }
     }
-  
-    // .wrap__item-long
-  
+
     &__item-long {
       &::before{
         top: 15%;
@@ -658,7 +666,432 @@ main {
   line-height: 20px;
   margin: 0;
 }
+}
+}
+
+
+@media(max-width:900px) and (min-width:425px){
+
+
+  header {
+    height: auto;
+
+    .header {
+      .logo {
+        width: auto;
+        display: block;
+        margin: 30px auto;
+      }
+
+      .button-take {
+        display: block;
+        margin: 30px auto;
+      }
+    }
+  }
+
+
+  main {
+
+
+    .condition-sliders{
+      .row{
+        margin: auto;
+      }
+      &__input{
+        width: 50%;
+      }
+      &__button{
+        &-minus{
+          width: 60px;
+          height: 60px;
+          padding-top: 17px;
+          transform: scale(0.9);
+        }
+        &-plus{
+          width: 60px;
+          height: 60px;
+          padding-top: 23px;
+          transform: scale(0.9);
+        }
+      }
+      &__text{
+        transform: translateY(-15px);
+        font-size: 22px;
+      }
+      &__value{
+        transform: translateY(-15px);
+        font-size: 24px;
+      }
+    }
+
+  .loan {
+      // .loan__item
+    &__item {
+      margin-bottom: 50px;
+      .row{
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .option-money {
+      width: auto;
+      height: auto;
+      margin: 40px auto;
+      padding: 0;
+    }
+  }
+  .calculations {
+    // .calculations__button-take-money
+
+    &__button-take-money {
+      width: 100%;
+      font-size: 26px;
+    }
+  }
+  }
+
+  .advantages {
+    .features {
+      padding: 0;
+      flex-direction: column;
+        // .features__item
+        &__item {
+          margin: 20px auto;
+          max-width: 80%;
+}
+          img{
+            height: 125px;
+          }
+          span {
+            font-size: 18px !important;
+          }
+        }
+    }
+  
+
+    .about{
+      &__header{
+        h2{
+          font-size: 34px;
+        }
+      }
+      .carousel{
+        &__item{
+          padding: 70px 20px;
+        }
+      }  
+    }
+
+    .company{
+      .wrap{
+        display: flex;
+        flex-direction: column;
+        &__item{
+          max-width: 100%;
+          width: 100%;
+          margin: auto;
+          .image{
+            height: 100px;
+            margin-top: 75px;
+          }
+          &::before{
+            width: 380px;
+            top: 25%;
+            left: 30%;
+          }
+          &-long{
+            width: auto;
+            &::before{
+              width: 380px;
+              height: 5px;
+              top: 25%;
+              left: 30%;
+            }
+          }
+        }
+      }
+      .card-company{
+        &__text{
+          margin-left: 5px;
+          &-check{
+            top:-20%;
+          }
+        }
+      }
+    }
+
+    .footer{
+      text-align: center;
+      &__item{
+        min-height: 100px;
+      }
+      .list{
+        margin: 0 !important;
+        padding: 0;
+        text-align: center;
+        line-height: normal;
+      }
+      img{
+        margin-bottom: 10px;
+      }
+    }
 
 }
 
+
+@media(max-width:424px){
+
+
+  header {
+    height: auto;
+
+    .header {
+      .logo {
+        width: 80%;
+        height: auto;
+        display: block;
+        margin: 30px auto 15px auto;
+      }
+
+      .button-take {
+        display: block;
+        height: 60px;
+        margin: 0px auto 25px;
+      }
+    }
+  }
+
+
+  main {
+    height: auto;
+
+    .condition-sliders{
+      .row{
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &__input{
+        width: 60%;
+        height: 10px;
+        margin: auto;
+        padding: 0;
+      }
+      &__button{
+        &-minus{
+          width: 40px;
+          height: 40px;
+          padding-top: 7px;
+          transform: scale(0.9);
+        }
+        &-plus{
+          width: 40px;
+          height: 40px;
+          padding-top: 12px;
+          font-size: 52px;
+          transform: scale(0.9);
+        }
+      }
+      &__text{
+        transform: translateY(-15px);
+        font-size: 16px;
+      }
+      &__value{
+        transform: translateY(-15px);
+        font-size: 22px;
+      }
+    }
+
+  .loan {
+      // .loan__item
+    &__item {
+      margin-bottom: 30px;
+      padding: 0;
+    }
+    .option-money {
+      width: auto;
+      height: auto;
+      margin: 60px auto 20px auto;
+      padding: 0px 20px;
+    }
+  }
+  .calculations {
+    // .calculations__button-take-money
+    &__text{
+      font-size: 16px;
+    }
+    &__button-take-money {
+      width: 100%;
+      margin-top: 15px;
+      height: 50px;
+      font-size: 20px;
+    }
+  }
+  }
+
+  .advantages {
+    padding-bottom: 0px;
+    .features {
+      padding: 0;
+      padding-top: 70px;
+      flex-direction: column;
+        // .features__item
+        &__item {
+          margin: 20px auto;
+          max-width: 80%;
+}
+          img{
+            height: 125px;
+          }
+          span {
+            font-size: 18px !important;
+          }
+        }
+    }
+  
+
+    .about{
+      &__header{
+        h2{
+          font-size: 36px;
+        }
+      }
+      .carousel{
+        &__item{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          padding: 50px 20px 70px 20px;
+          text-align: center;
+          img{
+            margin: auto;
+            margin-bottom: 20px;
+          }
+          p{
+            font-size: 28px;
+          }
+          span{
+            font-size: 20px;
+          }
+        }
+      }  
+    }
+
+
+
+    .company{
+      .header{
+        padding-top: 25px;
+        margin-bottom: 0px;
+      }
+      .wrap{
+        display: flex;
+        flex-direction: column;
+        &__item{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-bottom: 20px;
+          text-align: center;
+          padding: 0px;
+          margin: 0px;
+          .image{
+            height: 100px;
+            margin-top: 0px;
+          }
+          &::before{
+            display: none;
+          }
+          &-long{
+            width: auto;
+            &::before{
+              display: none;
+            }
+          }
+        }
+      }
+      .card-company{
+        &__text{
+          font-size: 19px;
+          margin-left: 0px;
+          &-check{
+            top:-35%;
+            left: 45%;
+          }
+        }
+      }
+    }
+
+    .footer{
+      text-align: center;
+      &__item{
+        min-height: 100px;
+      }
+      img{
+        width: 80%;
+        margin-bottom: 10px;
+      }
+      .list{
+        margin: 0 !important;
+        padding: 0;
+        text-align: center;
+        line-height: normal;
+      }
+      .call{
+        img{
+          width: 15%;
+        }
+      }
+      .text{
+        &__number{
+          font-size: 28px;
+        }
+      }
+    }
+
+    .next{
+      top: 100% !important;
+      right: 30% !important;
+      width: auto !important;
+      height: auto !important;
+    }
+    .prev{
+      top: 100% !important;
+      left: 30% !important;
+      width: auto !important;
+      height: auto !important;
+    }
+
+}
+
+
+// ARRROWS 
+/* Arrows */
+.prev {
+  content: '';
+  position: absolute;
+  top: 45%;
+  left: -5%;
+  transform: translateY(-50%) rotate(180deg);
+  background: url("../../src/img/about/arrow.png") center center no-repeat;
+  background-size: cover;
+  width: 38px;
+  height: 70px; 
+  border: none;
+}
+.next
+{
+  position: absolute;
+  top: 45%;
+  right: -5%;
+  transform: translateY(-50%);
+  background: url("../../src/img/about/arrow.png") center center no-repeat;
+  background-size: cover;
+  width: 38px;
+  height: 70px; 
+  border: none;
 }
