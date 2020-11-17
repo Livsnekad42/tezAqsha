@@ -9,20 +9,29 @@ html {
 }
 
 header {
-  height: 120px;
+  position: relative;
+  height: 125px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: $bgCol;
 
   .logo {
-    height: 65px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 9%;
+    height: 70px;
     width: 370px;
   }
 
   .button-take {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
     width: 270px;
-    height: 75px;
+    height: 70px;
     background: linear-gradient(0deg, rgba(0, 9, 120, 1) 0%, rgba(34, 51, 158, 1) 100%);
     color: white;
     font-size: 28px;
@@ -30,7 +39,6 @@ header {
     border: none;
     border-radius: 15px;
     font-weight: bold;
-    margin-left: 475px;
   }
 }
 
@@ -43,13 +51,21 @@ main {
   background-size: cover !important;
 
   .loan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__item{
+      margin-bottom: 60px;
+    }
     .option-money {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 350px;
-      width: 600px;
-      margin: 55px auto 70px auto;
+      width: 60%;
+      margin: 500px auto 30px auto;
+      padding-left: 80px;
     }
   }
 
@@ -58,8 +74,9 @@ main {
     // .condition-sliders__text
 
     &__text {
+      margin-left: -20px;
       text-align: left;
-      transform: translateY(-25px);
+      transform: translateY(-15px);
       font-size: 28px;
       color: $btnBgCol0ne;
     }
@@ -68,9 +85,11 @@ main {
 
     &__value {
       text-align: right;
-      transform: translateY(-25px);
-      font-size: 28px;
-      font-weight: bold;
+      margin-left: 20px;
+      transform: translateY(-15px);
+      text-transform: uppercase;
+      font-size: 30px;
+      font-weight: bolder;
       color: $bgCol;
     }
 
@@ -101,7 +120,7 @@ main {
       margin-top: 25px;
       margin-left: 30px;
       margin-right: 30px;
-      width: 370px;
+      width: 63%;
       height: 20px;
       padding: 0px;
       background: linear-gradient(90deg, $btnBgColTwo 1%, $bgCol 100%);
@@ -145,21 +164,21 @@ main {
 
   .calculations {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     flex-direction: column;
-
     &__text {
       font-size: 25px;
       color: $btnBgColTwo;
       margin: 0;
+      margin-left: 150px;
       padding: 0;
     }
 
     // .calculations__button-take-money
     &__button-take-money {
-      width: 600px;
+      width: 570px;
       height: 70px;
-      margin: 40px auto 0px auto;
+      margin: 40px auto 0px 140px;
       border: none;
       border-radius: 15px;
       background: $bgCol;
@@ -180,7 +199,6 @@ main {
     display: flex;
     justify-content: center;
     padding-top: 100px;
-  
     // .features__item
     &__item {
       display: flex;
@@ -188,6 +206,7 @@ main {
       align-items: center;
       text-align: center;
       margin-top: 0;
+      margin-left: 40px;
       min-width: 300px;
   
       img {
@@ -222,8 +241,9 @@ main {
       height: 40px;
       background: url("../../src/img/about/marks.png");
       background-size: cover;
-      top: 0%;
+      top: -10%;
       left: -2%;
+      z-index: 100;
     }
 
     &-down {
@@ -233,49 +253,50 @@ main {
       background: url("../../src/img/about/marks.png");
       background-size: cover;
       transform: rotate(180deg);
-      top: 88%;
+      top: 68%;
       left: 73%;
+      z-index: 100;
     }
   }
 
   // .about__arrow-prev
 
-  &__arrow-prev {
-    position: absolute;
-    top: 65%;
-    left: -2%;
-    transform: translateY(-50%) rotate(180deg);
-    background: url("../../src/img/about/arrow.png") center center no-repeat;
-    background-size: cover;
-    width: 38px;
-    height: 70px;
-  }
+  // &__arrow-prev {
+  //   position: absolute;
+  //   top: 65%;
+  //   left: -2%;
+  //   transform: translateY(-50%) rotate(180deg);
+  //   background: url("../../src/img/about/arrow.png") center center no-repeat;
+  //   background-size: cover;
+  //   width: 38px;
+  //   height: 70px;
+  // }
 
-  // .about__arrow-next
+  // // .about__arrow-next
 
-  &__arrow-next {
-    position: absolute;
-    top: 65%;
-    right: -2%;
-    transform: translateY(-50%);
-    background: url("../../src/img/about/arrow.png") center center no-repeat;
-    background-size: cover;
-    width: 37px;
-    height: 70px;
-  }
+  // &__arrow-next {
+  //   position: absolute;
+  //   top: 65%;
+  //   right: 20%;
+  //   transform: translateY(-50%);
+  //   background: url("../../src/img/about/arrow.png") center center no-repeat;
+  //   background-size: cover;
+  //   width: 37px;
+  //   height: 70px;
+  // }
 
   // .about__header
 
   &__header {
     width: 100%;
     margin-top: 60px;
-    margin-bottom: 75px;
     font-size: 40px;
     text-align: center;
     text-transform: uppercase;
     color: $btnBgColTwo;
 
     h2 {
+      margin-left: 40px;
       font-size: 40px;
       font-weight: bold;
     }
@@ -285,19 +306,30 @@ main {
 
 .carousel {
   display: flex;
-  width: 100%;
+  width: 95%;
   justify-content: center;
   align-items: center;
+  margin: auto;
+  margin-left: 100px;
+
+  // &__text{
+  //   width: 50%;
+  // }
+
   // .carousel__item
 
   &__item {
     position: relative;
-    display: flex;
+    display: flex !important;
     justify-content: center;
     width: 600px;
-    min-height: 400px !important;
+    min-height: 420px !important;
     margin-left: 10px;
-    padding-top: 40px;
+    margin-top: 75px;
+    padding-top: 20px;
+    div {
+      margin-top: -15px;
+    }
 
     img {
       width: 120px;
@@ -309,12 +341,15 @@ main {
     }
 
     p {
-      font-size: 22px;
+      font-size: 26px;
       color: $bgCol;
+      width: 80%;
     }
 
     span {
-      font-size: 22px;
+      display: inline-block;
+      width: 80%;
+      font-size: 19px;
       font-style: italic;
       color: $btnBgColTwo;
     }
@@ -325,7 +360,8 @@ main {
 // SECTION COMPANY 
 
 .company {
-  padding-bottom: 40px;
+  margin-top: -80px;
+  padding-bottom: 55px;
   background: url("../../src/img/company/bg.png");
   background-size: cover !important;
   // .company__features
@@ -335,11 +371,12 @@ main {
   }
 
   &__header {
-    padding-top: 100px;
+    padding-top: 60px;
     margin-bottom: 40px;
+    margin-left: 50px;
     font-weight: bolder;
     color: $bgCol;
-    font-size: 34px;
+    font-size: 36px;
     text-align: center;
     text-transform: uppercase;
   }
@@ -379,7 +416,9 @@ main {
         margin: 0 auto;
         margin-top: 15px;
         width: 750px;
-
+        .card-company__text-lorem {
+          width: 120% !important;
+        }     
         &::before {
           content: '';
           position: absolute;
@@ -428,8 +467,6 @@ main {
     }
 
     // .card-company__text-lorem
-
-    &__text-lorem {}
 
     &__text-red {
       color: $bgCol;
@@ -530,39 +567,47 @@ main {
 
 @media(max-width:1024px) and (min-width:901px) {
   header {
-    height: auto;
-
+    position: relative;
     .header {
       .logo {
+        position: absolute;
+        top: 50%;
+        left: 8%;
+        transform: translateY(-50%);
         height: 50px;
         width: auto;
-        margin-left: 10px;
-        margin-top: 50px;
-        margin-bottom: 25px;
       }
 
       .button-take {
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translateY(-50%);
         min-width: 300px;
-        margin-top: -90px;
-        margin-left: 70%;
         font-size: 23px;
       }
     }
   }
 
   .loan {
-      // .loan__item
+      margin-top: 220px;
     &__item {
     }
     .option-money {
-      margin: 55px auto 15px auto !important;
+      width: 70%;
+      margin: auto !important;
+      padding-left: 0px !important;
     }
   }
   .calculations {
-    text-align: center;
+    margin: auto;
+    &__text{
+      margin-left: 40px !important;
+    }
     // .calculations__button-take-money
 
     &__button-take-money {
+      margin: 40px auto !important;
       width: 80% !important;
     }
   }
@@ -577,7 +622,7 @@ main {
         margin: 30px auto;
         max-width: 60%;
         img{
-          min-height: 150px;
+          min-height: 200px;
         }
         span {
           font-size: 22px !important;
@@ -603,7 +648,13 @@ main {
         min-height: 80px;
         margin-right: 10px;
       }
-		}
+    }
+    .prev{
+      left: -12%;
+    }
+    .next{
+      right: 5%;
+    }
 }
 
 .company {
@@ -670,22 +721,28 @@ main {
 }
 
 
-@media(max-width:900px) and (min-width:425px){
+@media(max-width:900px) and (min-width:427px){
 
 
   header {
-    height: auto;
-
+    position: relative;
     .header {
       .logo {
+        position: absolute;
+        top: 50%;
+        left: 8%;
+        transform: translateY(-50%);
+        height: 50px;
         width: auto;
-        display: block;
-        margin: 30px auto;
       }
 
       .button-take {
-        display: block;
-        margin: 30px auto;
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translateY(-50%);
+        min-width: 300px;
+        font-size: 23px;
       }
     }
   }
@@ -725,28 +782,26 @@ main {
       }
     }
 
-  .loan {
-      // .loan__item
+    .loan {
+      margin-top: 220px;
     &__item {
-      margin-bottom: 50px;
-      .row{
-        display: flex;
-        justify-content: center;
-      }
     }
     .option-money {
-      width: auto;
-      height: auto;
-      margin: 40px auto;
-      padding: 0;
+      width: 70%;
+      margin: auto !important;
+      padding-left: 0px !important;
     }
   }
   .calculations {
+    margin: auto;
+    &__text{
+      margin-left: 40px !important;
+    }
     // .calculations__button-take-money
 
     &__button-take-money {
-      width: 100%;
-      font-size: 26px;
+      margin: 40px auto !important;
+      width: 80% !important;
     }
   }
   }
@@ -776,11 +831,37 @@ main {
           font-size: 34px;
         }
       }
+      &__slider{
+        margin: auto;
+        text-align: center;
+      }
       .carousel{
         &__item{
-          padding: 70px 20px;
+          display: flex !important;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          padding: 0px;
+          margin: 30px 0px;
+          img{
+            margin: 10px 0;
+          }
+          p{
+            width: 100%;
+          }
+          div{
+            margin: 0;
+          }
         }
+
       }  
+      &__marks-up{
+        left: 0%;
+        top: 0%;
+      }
+      &__marks-down{
+        top: 95%;
+      }
     }
 
     .company{
@@ -807,6 +888,9 @@ main {
               height: 5px;
               top: 25%;
               left: 30%;
+            }
+            .card-company__text-lorem{
+              width: 100% !important;
             }
           }
         }
@@ -836,28 +920,40 @@ main {
         margin-bottom: 10px;
       }
     }
-
+    .prev{
+      left: -4% !important;
+    }
+    .next{
+      right: -4% !important;
+    }
 }
 
 
-@media(max-width:424px){
+@media(max-width:426px){
 
 
   header {
-    height: auto;
-
+    position: relative;
+    height: 200px;
     .header {
       .logo {
-        width: 80%;
-        height: auto;
-        display: block;
-        margin: 30px auto 15px auto;
+        position: absolute;
+        top: 14%;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 300px;
+        height: 55px;
+        width: auto;
       }
 
       .button-take {
-        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 280px;
         height: 60px;
-        margin: 0px auto 25px;
+        font-size: 30px;
       }
     }
   }
@@ -878,6 +974,10 @@ main {
         height: 10px;
         margin: auto;
         padding: 0;
+        &::-webkit-slider-thumb {
+          width: 35px;
+          height: 35px;
+        }
       }
       &__button{
         &-minus{
@@ -895,16 +995,22 @@ main {
         }
       }
       &__text{
+        padding: 0;
         transform: translateY(-15px);
         font-size: 16px;
+        margin-left: 0px;
       }
       &__value{
+        padding: 0;
+        margin: 0;
         transform: translateY(-15px);
-        font-size: 22px;
+        font-size: 20px;
       }
     }
 
   .loan {
+    width: 85%;
+    margin-top: 0px;
       // .loan__item
     &__item {
       margin-bottom: 30px;
@@ -913,20 +1019,23 @@ main {
     .option-money {
       width: auto;
       height: auto;
-      margin: 60px auto 20px auto;
+      margin: 50px auto 0px auto;
       padding: 0px 20px;
     }
   }
   .calculations {
-    // .calculations__button-take-money
+    margin: 40px auto;
     &__text{
       font-size: 16px;
+
+      margin-left: 0px !important;
     }
+    // .calculations__button-take-money
+
     &__button-take-money {
-      width: 100%;
-      margin-top: 15px;
-      height: 50px;
-      font-size: 20px;
+      margin: 17px auto !important;
+      width: 100% !important;
+      height: 48px;
     }
   }
   }
@@ -934,8 +1043,7 @@ main {
   .advantages {
     padding-bottom: 0px;
     .features {
-      padding: 0;
-      padding-top: 70px;
+      padding: 50px 0px 65px 0px;
       flex-direction: column;
         // .features__item
         &__item {
@@ -943,20 +1051,39 @@ main {
           max-width: 80%;
 }
           img{
-            height: 125px;
+            height: 110px;
+            margin-bottom: 25px;
           }
           span {
-            font-size: 18px !important;
+            font-size: 22px !important;
+            line-height: 27px;
           }
         }
     }
   
 
     .about{
+      margin-bottom: 123px;
+      &__marks{
+        &-up{
+          top: -5%;
+          left: 8%;
+        }
+        &-down{
+          top: 90%;
+          left: 69%;
+        }
+      }
       &__header{
+        margin-top: 50px !important;
         h2{
+          width: 50%;
+          margin: auto;
           font-size: 36px;
         }
+      }
+      &__slider{
+        margin: auto;
       }
       .carousel{
         &__item{
@@ -966,11 +1093,15 @@ main {
           flex-direction: column;
           padding: 50px 20px 70px 20px;
           text-align: center;
+          div{
+            margin-top: 0px;
+          }
           img{
             margin: auto;
             margin-bottom: 20px;
           }
           p{
+            margin: auto;
             font-size: 28px;
           }
           span{
@@ -983,9 +1114,10 @@ main {
 
 
     .company{
-      .header{
-        padding-top: 25px;
-        margin-bottom: 0px;
+      margin-top: 0px;
+      &__header{
+        margin: auto;
+        padding: 46px 0px 38px 0px;
       }
       .wrap{
         display: flex;
@@ -1016,7 +1148,8 @@ main {
       }
       .card-company{
         &__text{
-          font-size: 19px;
+          width: 72%;
+          font-size: 20px;
           margin-left: 0px;
           &-check{
             top:-35%;
@@ -1054,13 +1187,15 @@ main {
     }
 
     .next{
-      top: 100% !important;
+      width: 20px !important;
+      top: 110% !important;
       right: 30% !important;
       width: auto !important;
       height: auto !important;
     }
     .prev{
-      top: 100% !important;
+      width: 20px !important;
+      top: 110% !important;
       left: 30% !important;
       width: auto !important;
       height: auto !important;
@@ -1075,23 +1210,23 @@ main {
   content: '';
   position: absolute;
   top: 45%;
-  left: -5%;
+  left: -6%;
   transform: translateY(-50%) rotate(180deg);
   background: url("../../src/img/about/arrow.png") center center no-repeat;
   background-size: cover;
-  width: 38px;
-  height: 70px; 
+  width: 25px;
+  height: 50px; 
   border: none;
 }
 .next
 {
   position: absolute;
   top: 45%;
-  right: -5%;
+  right: 1%;
   transform: translateY(-50%);
   background: url("../../src/img/about/arrow.png") center center no-repeat;
   background-size: cover;
-  width: 38px;
-  height: 70px; 
+  width: 25px;
+  height: 50px; 
   border: none;
 }
