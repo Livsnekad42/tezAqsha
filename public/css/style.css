@@ -1,6 +1,25 @@
 h3 {
   font-weight: lighter; }
 
+@font-face {
+  font-family: 'RubikRegular';
+  src: url("../../src/fonts/Rubik-Regular.ttf");
+  font-style: normal;
+  font-weight: 300; }
+
+@font-face {
+  font-family: 'RubikMedium';
+  src: url("../../src/fonts/Rubik-Medium.ttf");
+  font-weight: 500; }
+
+@font-face {
+  font-family: 'RubikBold';
+  src: url("../../src/fonts/Rubik-Bold.ttf");
+  font-weight: 500; }
+
+* {
+  font-family: "RubikRegular"; }
+
 html {
   overflow-x: hidden; }
 
@@ -23,14 +42,14 @@ header {
     top: 50%;
     transform: translateY(-50%);
     right: 5%;
-    width: 270px;
+    width: 260px;
     height: 70px;
     background: linear-gradient(0deg, #000978 0%, #22339e 100%);
     color: white;
     font-size: 28px;
     text-transform: uppercase;
     border: none;
-    border-radius: 15px;
+    border-radius: 7px;
     font-weight: bold; }
 
 main {
@@ -64,8 +83,8 @@ main {
     margin-left: 20px;
     transform: translateY(-15px);
     text-transform: uppercase;
-    font-size: 30px;
-    font-weight: bolder;
+    font-size: 28px;
+    font-family: 'RubikBold';
     color: #FF182F; }
   main .condition-sliders__button-minus {
     display: flex;
@@ -120,7 +139,7 @@ main {
     justify-content: start;
     flex-direction: column; }
     main .calculations__text {
-      font-size: 25px;
+      font-size: 24px;
       color: #000978;
       margin: 0;
       margin-left: 150px;
@@ -130,7 +149,7 @@ main {
       height: 70px;
       margin: 40px auto 0px 140px;
       border: none;
-      border-radius: 15px;
+      border-radius: 10px;
       background: #FF182F;
       color: white;
       font-size: 28px;
@@ -144,13 +163,16 @@ main {
     display: flex;
     justify-content: center;
     padding-top: 100px; }
+    .advantages .features__img-small {
+      height: 150px !important;
+      padding-top: 10px; }
     .advantages .features__item {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       margin-top: 0;
-      margin-left: 40px;
+      margin-left: 0px;
       min-width: 300px; }
       .advantages .features__item img {
         width: auto;
@@ -159,7 +181,8 @@ main {
         margin-bottom: 40px; }
       .advantages .features__item span {
         color: #2431A5;
-        font-size: 23px; }
+        font-size: 23px;
+        line-height: 30px; }
 
 .about {
   position: relative;
@@ -261,7 +284,7 @@ main {
         position: absolute;
         width: 250px;
         height: 5px;
-        top: 20%;
+        top: 17%;
         left: 50%;
         border-radius: 10px;
         background-color: #FF182F; }
@@ -328,7 +351,7 @@ main {
   .footer .text__number {
     margin: 0;
     padding: 0;
-    font-weight: bold;
+    font-family: 'RubikBold';
     font-size: 34px;
     color: #000978; }
   .footer .text__lorem {

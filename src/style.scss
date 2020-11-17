@@ -1,5 +1,30 @@
 @import "scss/fonts";
 
+// Обычный 
+
+@font-face { 
+  font-family: 'RubikRegular';
+  src: url('../../src/fonts/Rubik-Regular.ttf');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face { 
+  font-family: 'RubikMedium';
+  src: url('../../src/fonts/Rubik-Medium.ttf');
+  font-weight: 500;
+}
+
+@font-face { 
+  font-family: 'RubikBold';
+  src: url('../../src/fonts/Rubik-Bold.ttf');
+  font-weight: 500;
+}
+
+*{
+  font-family: "RubikRegular";
+}
+
 $bgCol: #FF182F;
 $btnBgCol0ne: #22339E;
 $btnBgColTwo: #000978;
@@ -30,14 +55,14 @@ header {
     top: 50%;
     transform: translateY(-50%);
     right: 5%;
-    width: 270px;
+    width: 260px;
     height: 70px;
     background: linear-gradient(0deg, rgba(0, 9, 120, 1) 0%, rgba(34, 51, 158, 1) 100%);
     color: white;
     font-size: 28px;
     text-transform: uppercase;
     border: none;
-    border-radius: 15px;
+    border-radius: 7px;
     font-weight: bold;
   }
 }
@@ -88,8 +113,8 @@ main {
       margin-left: 20px;
       transform: translateY(-15px);
       text-transform: uppercase;
-      font-size: 30px;
-      font-weight: bolder;
+      font-size: 28px;
+      font-family: 'RubikBold';
       color: $bgCol;
     }
 
@@ -167,7 +192,7 @@ main {
     justify-content: start;
     flex-direction: column;
     &__text {
-      font-size: 25px;
+      font-size: 24px;
       color: $btnBgColTwo;
       margin: 0;
       margin-left: 150px;
@@ -180,7 +205,7 @@ main {
       height: 70px;
       margin: 40px auto 0px 140px;
       border: none;
-      border-radius: 15px;
+      border-radius: 10px;
       background: $bgCol;
       color: white;
       font-size: 28px;
@@ -200,15 +225,21 @@ main {
     justify-content: center;
     padding-top: 100px;
     // .features__item
+    &__img{
+      &-small{
+        height: 150px !important;
+        padding-top: 10px;
+      }
+    }
     &__item {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       margin-top: 0;
-      margin-left: 40px;
+      margin-left: 0px;
       min-width: 300px;
-  
+      
       img {
         width: auto;
         height: 150px;
@@ -219,6 +250,7 @@ main {
       span {
         color: #2431A5;
         font-size: 23px;
+        line-height: 30px;
       }
     }
   }
@@ -398,7 +430,7 @@ main {
         position: absolute;
         width: 250px;
         height: 5px;
-        top: 20%;
+        top: 17%;
         left: 50%;
         border-radius: 10px;
         background-color: $bgCol;
@@ -519,7 +551,7 @@ main {
     &__number {
       margin: 0;
       padding: 0;
-      font-weight: bold;
+      font-family: 'RubikBold';
       font-size: 34px;
       color: $btnBgColTwo;
     }
