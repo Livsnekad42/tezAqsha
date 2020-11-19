@@ -30,7 +30,7 @@
     <!-- HEADER -->
 
     <header>
-            <div class="header">
+            <div class="container header">
                 <img src="./src/img/logo.png" alt="logo" class="logo">
                 <button class="button-take">Взять заём</button>
             </div>
@@ -48,7 +48,7 @@
 
             <!-- FIRST SLIDER -->
 
-                <div class="loan__item condition-sliders col-12">
+                <div class="loan__item  condition-sliders col-12">
                     <div class="row">
                         <div class="condition-sliders__text col-6">
                             СУММА ЗАЙМА
@@ -59,14 +59,14 @@
                     </div>
                     <div class="row">
                         <button class="condition-sliders__button-minus"> - </button>
-                        <input type="range" class="condition-sliders__input" min="1" max="100000" step="500">
+                        <input type="range" class="condition-sliders__input" min="1" max="100000" step="500" value="100000">
                         <button class="condition-sliders__button-plus"> + </button>
                     </div>
                 </div>
 
             <!-- SECOND SLIDER -->
 
-                <div class="loan__item condition-sliders col-12">
+                <div class="loan__item loan__item-down condition-sliders col-12">
                     <div class="row">
                         <div class="condition-sliders__text col-6">
                             СРОК ЗАЙМА
@@ -88,8 +88,8 @@
             <!-- CALCULATIONS -->
 
             <div class="loan__item calculations row col-xl-10 offset-xl-1 col-10 offset-1">
-                <p class="calculations__text">Возвращаете: <strong>12 000 тнг</strong> </p>
-                <p class="calculations__text">Дата возврата: <strong>21.10.2021</strong></p>
+                <p class="calculations__text">Возвращаете: <strong>125 000 тнг.</strong> </p>
+                <p class="calculations__text calculations__text-data">Дата возврата: <strong>26 сентября 2020, среда</strong></p>
                 <button class="calculations__button-take-money">Получить деньги</button>
             </div>
 
@@ -105,11 +105,11 @@
                 <img src="./src/img/future/1.png" alt="feature1">
                 <span>Мы быстро рассмотрим Вашу заявку и примем решение о предоставлении денежных средств выбранным вами способом</span>
             </div>
-            <div class="features__item col-xl-4 col-12">
+            <div class="features__item features__item-second col-xl-4 col-12">
                 <img src="./src/img/future/2.png" alt="feature2" class="features__img-small">
                 <span>Клиенты должны помнить, что кредитная история влияет на одобрение</span>
             </div>
-            <div class="features__item col-xl-4 col-12">
+            <div class="features__item features__item-third col-xl-4 col-12">
                 <img src="./src/img/future/3.png" alt="feature3">
                 <span>В TEZ AQSHA все условия получения займа открыты и прозрачны, Вам это понравится</span>
             </div>
@@ -229,7 +229,7 @@
             </div>
 
             <div class="company__features wrap">
-                <div class="wrap__item card-company col-12">
+                <div class="wrap__item card-company col-6">
                     <div class="image">
                         <img src="./src/img/company/icons/1.png" alt="company">
                     </div>
@@ -243,7 +243,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="wrap__item card-company col-12">
+                <div class="wrap__item card-company col-6">
                     <div class="image">
                         <img src="./src/img/company/icons/2.png" alt="company">
                     </div>
@@ -256,7 +256,7 @@
                             высокий процент одобрения</p>
                     </div>
                 </div>
-                <div class="wrap__item card-company col-12">
+                <div class="wrap__item card-company col-6">
                     <div class="image">
                         <img src="./src/img/company/icons/3.png" alt="company">
                     </div>
@@ -270,7 +270,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="wrap__item card-company col-12">
+                <div class="wrap__item card-company col-6">
                     <div class="image">
                         <img src="./src/img/company/icons/4.png" alt="company">
                     </div>
@@ -285,7 +285,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="wrap__item card-company col-12">
+                <div class="wrap__item card-company col-6">
                     <div class="image">
                         <img src="./src/img/company/icons/5.png" alt="company">
                     </div>
@@ -300,7 +300,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="wrap__item card-company col-12">
+                <div class="wrap__item card-company col-6">
                     <div class="image">
                         <img src="./src/img/company/icons/6.png" alt="company">
                     </div>
@@ -346,7 +346,7 @@
         <div class="container">
             <div class="row">
                 <div class="footer__item col-xl-4 col-12 col-lg-4">
-                    <img src="./src/img/logo.png" alt="logo">
+                    <img class="footer__img-logo" src="./src/img/logo.png" alt="logo">
                     <span>@ 2020 TEZ AQSHA</span>
                 </div>
     
