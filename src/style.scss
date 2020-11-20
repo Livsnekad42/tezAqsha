@@ -728,7 +728,7 @@ main {
       .logo {
         position: absolute;
         top: 50%;
-        left: 8%;
+        left: 14%;
         transform: translateY(-50%);
         height: 50px;
         width: auto;
@@ -737,7 +737,7 @@ main {
       .button-take {
         position: absolute;
         top: 50%;
-        right: 5%;
+        right: 14%;
         transform: translateY(-50%);
         min-width: 300px;
         font-size: 23px;
@@ -775,7 +775,7 @@ main {
     flex-direction: column;
       // .features__item
       &__item {
-        margin: 30px auto;
+        margin: 30px auto !important;
         max-width: 60%;
         img{
           min-height: 200px;
@@ -789,7 +789,7 @@ main {
 }
 
 .carousel {
-
+  margin-left: 0px;
   p{
     font-size: 20px;
   }
@@ -806,22 +806,39 @@ main {
       }
     }
     .prev{
-      left: -12%;
+      left: 0%;
     }
     .next{
-      right: 5%;
+      right: -5%;
     }
 }
 
+.about{
+  &__header{
+    margin-left: 0px;
+  }
+}
+
 .company {
+  &__header{
+    margin-left: 0;
+    padding-left: 0;
+  }
   .card-company{
     &__text{
       font-size: 19px;
-      margin-top: 50px;
-      margin-left: 55px;
+      margin-top: 30px;
+      margin-left: 15px;
       &-check{
         top: -15%;
         left: -5%;
+        &:nth-child(1){
+          top: -20%;
+          left: 3%;
+        }
+      }
+      &-lorem{
+        width: 100% !important;
       }
     }
   }
@@ -830,14 +847,42 @@ main {
 
     // .wrap__item
     &__item {
-      .image{
-        height: 100px;
-        min-width: 80px;
+      &:nth-child(even){
+        padding-left: 0px;
+      }
+      &:nth-child(5){
+        .card-company__text-check{
+          top: -27%;
+        }
+      }
+      &:nth-child(6){
+        .card-company__text-check{
+          top: -27%;
+        }
+      }
+      &:nth-child(7){
+        &::before{
+          top: 12%;
+          left: 46% !important;
+          width: 300px;
+        }
       }
       &::before{
-        top: 10%;
-        left: 50%;
-        width: 170px;
+        top: 6%;
+        left: 50% !important;
+        width: 225px;
+      }
+      &:nth-child(3){
+        .card-company__text{
+          &-lorem{
+            width: 125% !important;
+            margin-left: -10%;
+          }
+          &-check{
+            top: -28%;
+            left: -5%;
+          }
+        }
       }
     }
 
