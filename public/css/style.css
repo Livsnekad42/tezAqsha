@@ -156,7 +156,7 @@ main {
       height: 70px;
       margin: 30px auto 0px 140px;
       border: none;
-      border-radius: 10px;
+      border-radius: 6px;
       background: #FF182F;
       color: white;
       font-size: 28px;
@@ -566,7 +566,7 @@ main {
     header .header .button-take {
       position: absolute;
       top: 50%;
-      right: 5%;
+      right: 12%;
       transform: translateY(-50%);
       min-width: 300px;
       font-size: 23px; }
@@ -607,7 +607,7 @@ main {
     padding: 0;
     flex-direction: column; }
     .advantages .features__item {
-      margin: 20px auto;
+      margin: 20px auto !important;
       max-width: 80%; }
     .advantages .features img {
       height: 125px; }
@@ -643,13 +643,20 @@ main {
       max-width: 100%;
       width: 100%;
       margin: auto; }
+      .company .wrap__item:nth-child(even) {
+        padding-left: 0px;
+        margin-left: 0px; }
       .company .wrap__item .image {
-        height: 100px;
-        margin-top: 75px; }
+        margin-top: 75px;
+        min-width: 160px;
+        margin: auto;
+        text-align: center; }
+        .company .wrap__item .image img {
+          padding-left: 0px !important; }
       .company .wrap__item::before {
         width: 380px;
         top: 25%;
-        left: 30%; }
+        left: 38% !important; }
       .company .wrap__item-long {
         width: auto; }
         .company .wrap__item-long::before {
@@ -659,10 +666,15 @@ main {
           left: 30%; }
         .company .wrap__item-long .card-company__text-lorem {
           width: 100% !important; }
-  .company .card-company__text {
-    margin-left: 5px; }
-    .company .card-company__text-check {
-      top: -20%; }
+  .company .card-company {
+    padding: 0%; }
+    .company .card-company__text {
+      margin-left: 5px !important; }
+      .company .card-company__text-lorem {
+        margin-left: 5px !important;
+        width: 100% !important; }
+      .company .card-company__text-check {
+        top: -40%; }
   .footer {
     text-align: center; }
     .footer__item {
@@ -681,31 +693,31 @@ main {
 
 @media (max-width: 426px) {
   header {
-    position: relative;
-    height: 200px; }
+    position: relative; }
     header .header .logo {
       position: absolute;
       top: 14%;
       left: 50%;
       transform: translateX(-50%);
-      min-width: 300px;
-      height: 55px;
-      width: auto; }
+      height: 43px;
+      width: auto;
+      margin-left: 0px; }
     header .header .button-take {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translateX(-50%);
-      min-width: 280px;
-      height: 60px;
-      font-size: 30px; }
+      transform: translateX(-50%) translateY(17%);
+      height: 40px;
+      width: 205px;
+      font-size: 20px; }
   main {
     height: auto; }
     main .condition-sliders .row {
       margin: auto;
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      margin-bottom: -8px; }
     main .condition-sliders__input {
       width: 60%;
       height: 10px;
@@ -715,62 +727,71 @@ main {
         width: 35px;
         height: 35px; }
     main .condition-sliders__button-minus {
-      width: 40px;
-      height: 40px;
-      padding-top: 7px;
-      transform: scale(0.9); }
-    main .condition-sliders__button-plus {
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
       padding-top: 12px;
-      font-size: 52px;
-      transform: scale(0.9); }
+      transform: scale(0.9);
+      font-size: 50px; }
+    main .condition-sliders__button-plus {
+      width: 30px;
+      height: 30px;
+      padding-top: 13px;
+      transform: scale(0.9);
+      font-size: 34px; }
     main .condition-sliders__text {
       padding: 0;
       transform: translateY(-15px);
-      font-size: 16px;
+      font-size: 13px;
       margin-left: 0px; }
     main .condition-sliders__value {
       padding: 0;
       margin: 0;
       transform: translateY(-15px);
-      font-size: 20px; }
+      font-size: 13px; }
     main .loan {
       width: 85%;
       margin-top: 0px; }
       main .loan__item {
-        margin-bottom: 30px;
+        margin-bottom: 36px;
         padding: 0; }
       main .loan .option-money {
         width: auto;
         height: auto;
-        margin: 50px auto 0px auto;
+        margin: 46px auto 0px auto;
         padding: 0px 20px; }
     main .calculations {
-      margin: 40px auto; }
+      margin: 23px auto; }
       main .calculations__text {
-        font-size: 16px;
-        margin-left: 0px !important; }
+        font-size: 9px;
+        padding: 0;
+        margin-left: 9px !important;
+        line-height: 12px;
+        letter-spacing: 0px; }
       main .calculations__button-take-money {
-        margin: 17px auto !important;
+        margin: 16px auto !important;
         width: 100% !important;
-        height: 48px; }
+        height: 32px;
+        font-size: 11px; }
   .advantages {
     padding-bottom: 0px; }
     .advantages .features {
-      padding: 50px 0px 65px 0px;
+      padding-top: 50px !important;
       flex-direction: column; }
       .advantages .features__item {
-        margin: 20px auto;
-        max-width: 80%; }
+        transform: scale(0.7);
+        margin: -39px auto -2px auto !important;
+        padding: 0 !important;
+        max-width: 90%; }
       .advantages .features img {
         height: 110px;
         margin-bottom: 25px; }
       .advantages .features span {
-        font-size: 22px !important;
-        line-height: 27px; }
+        margin-top: -10px !important;
+        font-size: 20px !important;
+        line-height: 24px !important; }
   .about {
-    margin-bottom: 123px; }
+    margin-left: 0px;
+    margin-bottom: 0px; }
     .about__marks-up {
       top: -5%;
       left: 8%; }
@@ -778,13 +799,15 @@ main {
       top: 90%;
       left: 69%; }
     .about__header {
-      margin-top: 50px !important; }
+      margin-top: 72px !important; }
       .about__header h2 {
         width: 50%;
         margin: auto;
-        font-size: 36px; }
+        font-size: 24px; }
     .about__slider {
-      margin: auto; }
+      margin: auto;
+      margin-top: -87px;
+      transform: scale(0.7); }
     .about .carousel__item {
       display: flex;
       justify-content: center;
@@ -802,11 +825,15 @@ main {
         font-size: 28px; }
       .about .carousel__item span {
         font-size: 20px; }
+    .about .carousel__text {
+      width: 140%;
+      margin-top: 20px !important; }
   .company {
     margin-top: 0px; }
     .company__header {
+      font-size: 24px;
       margin: auto;
-      padding: 46px 0px 38px 0px; }
+      padding: 27px 0px 13px 0px; }
     .company .wrap {
       display: flex;
       flex-direction: column; }
@@ -817,23 +844,69 @@ main {
         flex-direction: column;
         margin-bottom: 20px;
         text-align: center;
-        padding: 0px;
-        margin: 0px; }
-        .company .wrap__item .image {
-          height: 100px;
-          margin-top: 0px; }
+        padding: 0px !important;
+        margin: auto;
+        transform: scale(0.5);
+        margin-left: 0px !important;
+        margin-right: 0px !important; }
         .company .wrap__item::before {
           display: none; }
         .company .wrap__item-long {
           width: auto; }
           .company .wrap__item-long::before {
             display: none; }
+        .company .wrap__item:nth-child(3) .card-company__text {
+          margin-left: 0px;
+          margin-bottom: 0px; }
+          .company .wrap__item:nth-child(3) .card-company__text-check {
+            top: -23%; }
+        .company .wrap__item:nth-child(3) .image img {
+          padding-left: 0 !important; }
+        .company .wrap__item:nth-child(4) .card-company__text {
+          margin-left: 0px;
+          margin-bottom: 0px; }
+          .company .wrap__item:nth-child(4) .card-company__text-lorem {
+            width: 100%; }
+        .company .wrap__item:nth-child(4) .image img {
+          padding-left: 0 !important; }
+        .company .wrap__item:nth-child(5) .card-company__text {
+          margin-left: 0px;
+          margin-bottom: 0px; }
+          .company .wrap__item:nth-child(5) .card-company__text-check {
+            left: 45%;
+            top: -23%; }
+          .company .wrap__item:nth-child(5) .card-company__text-lorem {
+            width: 100%; }
+        .company .wrap__item:nth-child(5) .image img {
+          padding-left: 0 !important; }
+        .company .wrap__item:nth-child(6) .card-company__text {
+          margin-left: 0px;
+          margin-bottom: 0px; }
+          .company .wrap__item:nth-child(6) .card-company__text-check {
+            top: -23%; }
+          .company .wrap__item:nth-child(6) .card-company__text-lorem {
+            width: 100%; }
+        .company .wrap__item:nth-child(6) .image img {
+          padding-left: 0 !important; }
+        .company .wrap__item:nth-child(7) .card-company__text {
+          margin-left: 0px;
+          margin-bottom: 0px; }
+          .company .wrap__item:nth-child(7) .card-company__text-check {
+            left: 45%;
+            top: -17%; }
+          .company .wrap__item:nth-child(7) .card-company__text-lorem {
+            width: 100%; }
+        .company .wrap__item:nth-child(7) .image img {
+          padding-left: 0 !important; }
     .company .card-company__text {
-      width: 72%;
+      width: 100% !important;
       font-size: 20px;
       margin-left: 0px; }
+      .company .card-company__text-lorem {
+        font-size: 30px;
+        width: 100%; }
       .company .card-company__text-check {
-        top: -35%;
+        top: -20%;
         left: 45%; }
   .footer {
     text-align: center; }
@@ -847,19 +920,22 @@ main {
       padding: 0;
       text-align: center;
       line-height: normal; }
-    .footer .call img {
-      width: 15%; }
+    .footer .call {
+      padding: 0;
+      margin: auto; }
+      .footer .call img {
+        width: 15%; }
     .footer .text__number {
       font-size: 28px; }
   .next {
     width: 20px !important;
-    top: 110% !important;
+    top: 114% !important;
     right: 30% !important;
     width: auto !important;
     height: auto !important; }
   .prev {
     width: 20px !important;
-    top: 110% !important;
+    top: 114% !important;
     left: 30% !important;
     width: auto !important;
     height: auto !important; } }

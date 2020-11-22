@@ -216,7 +216,7 @@ main {
       height: 70px;
       margin: 30px auto 0px 140px;
       border: none;
-      border-radius: 10px;
+      border-radius: 6px;
       background: $bgCol;
       color: white;
       font-size: 28px;
@@ -940,7 +940,7 @@ main {
       .button-take {
         position: absolute;
         top: 50%;
-        right: 5%;
+        right: 12%;
         transform: translateY(-50%);
         min-width: 300px;
         font-size: 23px;
@@ -1013,7 +1013,7 @@ main {
       flex-direction: column;
         // .features__item
         &__item {
-          margin: 20px auto;
+          margin: 20px auto !important;
           max-width: 80%;
 }
           img{
@@ -1073,14 +1073,23 @@ main {
           max-width: 100%;
           width: 100%;
           margin: auto;
+          &:nth-child(even){
+            padding-left: 0px;
+            margin-left: 0px;
+          }
           .image{
-            height: 100px;
             margin-top: 75px;
+            min-width: 160px;
+            margin: auto;
+            text-align: center;
+            img{
+              padding-left: 0px !important;
+            }
           }
           &::before{
             width: 380px;
             top: 25%;
-            left: 30%;
+            left: 38% !important;
           }
           &-long{
             width: auto;
@@ -1097,10 +1106,15 @@ main {
         }
       }
       .card-company{
+        padding: 0%;
         &__text{
-          margin-left: 5px;
+          margin-left: 5px !important;
+          &-lorem{
+            margin-left: 5px !important;
+            width: 100% !important;
+          }
           &-check{
-            top:-20%;
+            top:-40%;
           }
         }
       }
@@ -1135,26 +1149,25 @@ main {
 
   header {
     position: relative;
-    height: 200px;
     .header {
       .logo {
         position: absolute;
         top: 14%;
         left: 50%;
         transform: translateX(-50%);
-        min-width: 300px;
-        height: 55px;
+        height: 43px;
         width: auto;
+        margin-left: 0px;
       }
 
       .button-take {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translateX(-50%);
-        min-width: 280px;
-        height: 60px;
-        font-size: 30px;
+        transform: translateX(-50%) translateY(17%);
+        height: 40px;
+        width: 205px;
+        font-size: 20px;
       }
     }
   }
@@ -1169,6 +1182,7 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: -8px;
       }
       &__input{
         width: 60%;
@@ -1182,30 +1196,31 @@ main {
       }
       &__button{
         &-minus{
-          width: 40px;
-          height: 40px;
-          padding-top: 7px;
+          width: 30px;
+          height: 30px;
+          padding-top: 12px;
           transform: scale(0.9);
+          font-size: 50px;
         }
         &-plus{
-          width: 40px;
-          height: 40px;
-          padding-top: 12px;
-          font-size: 52px;
+          width: 30px;
+          height: 30px;
+          padding-top: 13px;
           transform: scale(0.9);
+          font-size: 34px;
         }
       }
       &__text{
         padding: 0;
         transform: translateY(-15px);
-        font-size: 16px;
+        font-size: 13px;
         margin-left: 0px;
       }
       &__value{
         padding: 0;
         margin: 0;
         transform: translateY(-15px);
-        font-size: 20px;
+        font-size: 13px;
       }
     }
 
@@ -1214,29 +1229,32 @@ main {
     margin-top: 0px;
       // .loan__item
     &__item {
-      margin-bottom: 30px;
+      margin-bottom: 36px;
       padding: 0;
     }
     .option-money {
       width: auto;
       height: auto;
-      margin: 50px auto 0px auto;
+      margin: 46px auto 0px auto;
       padding: 0px 20px;
     }
   }
   .calculations {
-    margin: 40px auto;
+    margin: 23px auto;
     &__text{
-      font-size: 16px;
-
-      margin-left: 0px !important;
+      font-size: 9px;
+      padding: 0;
+      margin-left: 9px !important;
+      line-height: 12px;
+      letter-spacing: 0px;
     }
     // .calculations__button-take-money
 
     &__button-take-money {
-      margin: 17px auto !important;
+      margin: 16px auto !important;
       width: 100% !important;
-      height: 48px;
+      height: 32px;
+      font-size: 11px;
     }
   }
   }
@@ -1244,27 +1262,31 @@ main {
   .advantages {
     padding-bottom: 0px;
     .features {
-      padding: 50px 0px 65px 0px;
+      padding-top: 50px !important;
       flex-direction: column;
         // .features__item
         &__item {
-          margin: 20px auto;
-          max-width: 80%;
+          transform: scale(0.7);
+          margin: -39px auto -2px auto !important; 
+          padding: 0 !important;
+          max-width: 90%;
 }
           img{
             height: 110px;
             margin-bottom: 25px;
           }
           span {
-            font-size: 22px !important;
-            line-height: 27px;
+            margin-top: -10px !important;
+            font-size: 20px !important;
+            line-height: 24px !important;
           }
         }
     }
   
 
     .about{
-      margin-bottom: 123px;
+      margin-left: 0px;
+      margin-bottom: 0px;
       &__marks{
         &-up{
           top: -5%;
@@ -1276,15 +1298,17 @@ main {
         }
       }
       &__header{
-        margin-top: 50px !important;
+        margin-top: 72px !important;
         h2{
           width: 50%;
           margin: auto;
-          font-size: 36px;
+          font-size: 24px;
         }
       }
       &__slider{
         margin: auto;
+        margin-top: -87px;
+        transform: scale(0.7);
       }
       .carousel{
         &__item{
@@ -1309,6 +1333,10 @@ main {
             font-size: 20px;
           }
         }
+        &__text{
+          width: 140%;
+          margin-top: 20px !important;
+        }
       }  
     }
 
@@ -1317,8 +1345,9 @@ main {
     .company{
       margin-top: 0px;
       &__header{
+        font-size: 24px;
         margin: auto;
-        padding: 46px 0px 38px 0px;
+        padding: 27px 0px 13px 0px;
       }
       .wrap{
         display: flex;
@@ -1330,11 +1359,12 @@ main {
           flex-direction: column;
           margin-bottom: 20px;
           text-align: center;
-          padding: 0px;
-          margin: 0px;
+          padding: 0px !important;
+          margin: auto;
+          transform: scale(0.5);
+          margin-left: 0px !important;
+          margin-right: 0px !important;
           .image{
-            height: 100px;
-            margin-top: 0px;
           }
           &::before{
             display: none;
@@ -1345,15 +1375,100 @@ main {
               display: none;
             }
           }
+          &:nth-child(3){
+            .card-company__text {
+              margin-left: 0px;
+              margin-bottom: 0px;
+              &-check{
+                top: -23%;
+              }
+            }
+            .image{
+              img{
+                padding-left: 0 !important;
+              }
+            }
+        }
+        &:nth-child(4){
+          .card-company__text {
+            margin-left: 0px;
+            margin-bottom: 0px;
+            &-lorem{
+              width: 100%;
+            }
+          }
+          .image{
+            img{
+              padding-left: 0 !important;
+            }
+          }
+      }
+      &:nth-child(5){
+        .card-company__text {
+          margin-left: 0px;
+          margin-bottom: 0px;
+          &-check{
+            left: 45%;
+            top: -23%;
+          }  
+          &-lorem{
+            width: 100%;
+          }
+        }
+        .image{
+          img{
+            padding-left: 0 !important;
+          }
+        }
+    }
+    &:nth-child(6){
+      .card-company__text {
+        margin-left: 0px;
+        margin-bottom: 0px;
+        &-check{
+          top: -23%;
+        }  
+        &-lorem{
+          width: 100%;
         }
       }
+      .image{
+        img{
+          padding-left: 0 !important;
+        }
+      }
+  }
+  &:nth-child(7){
+    .card-company__text {
+      margin-left: 0px;
+      margin-bottom: 0px;
+      &-check{
+        left: 45%;
+        top: -17%;
+      }  
+      &-lorem{
+        width: 100%;
+      }
+    }
+    .image{
+      img{
+        padding-left: 0 !important;
+      }
+    }
+}
+      }
+    }
       .card-company{
         &__text{
-          width: 72%;
+          width: 100% !important;
           font-size: 20px;
           margin-left: 0px;
+          &-lorem{
+            font-size: 30px;
+            width: 100%;
+          }
           &-check{
-            top:-35%;
+            top:-20%;
             left: 45%;
           }
         }
@@ -1376,6 +1491,8 @@ main {
         line-height: normal;
       }
       .call{
+        padding: 0;
+        margin: auto;
         img{
           width: 15%;
         }
@@ -1389,14 +1506,14 @@ main {
 
     .next{
       width: 20px !important;
-      top: 110% !important;
+      top: 114% !important;
       right: 30% !important;
       width: auto !important;
       height: auto !important;
     }
     .prev{
       width: 20px !important;
-      top: 110% !important;
+      top: 114% !important;
       left: 30% !important;
       width: auto !important;
       height: auto !important;
