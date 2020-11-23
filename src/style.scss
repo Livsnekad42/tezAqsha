@@ -42,7 +42,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 17px;
     max-width: 1170px;
     .logo {
       height: 70px;
@@ -963,13 +962,13 @@ main {
         &-minus{
           width: 60px;
           height: 60px;
-          padding-top: 17px;
+          padding-top: 25px;
           transform: scale(0.9);
         }
         &-plus{
           width: 60px;
           height: 60px;
-          padding-top: 23px;
+          padding-top: 26px;
           transform: scale(0.9);
         }
       }
@@ -990,12 +989,13 @@ main {
     .option-money {
       width: 70%;
       margin: auto !important;
-      padding-left: 0px !important;
+      padding-left: 50px !important;
     }
   }
   .calculations {
     margin: auto;
     &__text{
+      padding-left: 0px !important;
       margin-left: 40px !important;
     }
     // .calculations__button-take-money
@@ -1270,7 +1270,9 @@ main {
           margin: -39px auto -2px auto !important; 
           padding: 0 !important;
           max-width: 90%;
-}
+          &-third{
+            margin-top: -27px !important;
+          }
           img{
             height: 110px;
             margin-bottom: 25px;
@@ -1282,6 +1284,7 @@ main {
           }
         }
     }
+  }
   
 
     .about{
@@ -1289,16 +1292,16 @@ main {
       margin-bottom: 0px;
       &__marks{
         &-up{
-          top: -5%;
-          left: 8%;
+          top: -2%;
+          left: -4%;
         }
         &-down{
           top: 90%;
-          left: 69%;
+          left: 75%;
         }
       }
       &__header{
-        margin-top: 72px !important;
+        margin-top: 58px !important;
         h2{
           width: 50%;
           margin: auto;
@@ -1316,7 +1319,7 @@ main {
           justify-content: center;
           align-items: center;
           flex-direction: column;
-          padding: 50px 20px 70px 20px;
+          padding: 62px 20px 70px 20px;
           text-align: center;
           div{
             margin-top: 0px;
@@ -1327,15 +1330,19 @@ main {
           }
           p{
             margin: auto;
-            font-size: 28px;
+            margin-top: -2px;
+            margin-left: 29px;
+            font-size: 22px;
           }
           span{
-            font-size: 20px;
+            font-size: 21px;
+            margin-top: 11px;
+            margin-left: -18px;
           }
         }
         &__text{
           width: 140%;
-          margin-top: 20px !important;
+          margin-top: 15px !important;
         }
       }  
     }
@@ -1343,11 +1350,12 @@ main {
 
 
     .company{
-      margin-top: 0px;
+      margin-top: -15px;
+      padding-bottom: 39px !important;
       &__header{
         font-size: 24px;
         margin: auto;
-        padding: 27px 0px 13px 0px;
+        padding: 33px 0px 0px 0px;
       }
       .wrap{
         display: flex;
@@ -1364,6 +1372,7 @@ main {
           transform: scale(0.5);
           margin-left: 0px !important;
           margin-right: 0px !important;
+          margin-top: 10px;
           .image{
           }
           &::before{
@@ -1375,12 +1384,26 @@ main {
               display: none;
             }
           }
+          &:nth-child(1){
+          
+          }
+          &:nth-child(2){
+            margin-top: -6px;
+            .card-company__text{
+              width: 145% !important;
+              &-check{
+                top: -29%;
+              }
+            }
+          }
           &:nth-child(3){
+            margin-top: -17px;
             .card-company__text {
               margin-left: 0px;
               margin-bottom: 0px;
+              margin-top: 99px;
               &-check{
-                top: -23%;
+                top: -41%;
               }
             }
             .image{
@@ -1390,6 +1413,7 @@ main {
             }
         }
         &:nth-child(4){
+          margin-top: -9px;
           .card-company__text {
             margin-left: 0px;
             margin-bottom: 0px;
@@ -1408,8 +1432,8 @@ main {
           margin-left: 0px;
           margin-bottom: 0px;
           &-check{
-            left: 45%;
-            top: -23%;
+            left: 46%;
+            top: -34%;
           }  
           &-lorem{
             width: 100%;
@@ -1422,11 +1446,12 @@ main {
         }
     }
     &:nth-child(6){
+      margin-top: -23px;
       .card-company__text {
         margin-left: 0px;
         margin-bottom: 0px;
         &-check{
-          top: -23%;
+          top: -35%;
         }  
         &-lorem{
           width: 100%;
@@ -1439,12 +1464,14 @@ main {
       }
   }
   &:nth-child(7){
+    margin-top: 9px;
     .card-company__text {
+      width: 117% !important;
       margin-left: 0px;
       margin-bottom: 0px;
       &-check{
-        left: 45%;
-        top: -17%;
+        left: 46%;
+        top: -22%;
       }  
       &-lorem{
         width: 100%;
@@ -1460,28 +1487,46 @@ main {
     }
       .card-company{
         &__text{
-          width: 100% !important;
+          width: 150% !important;
           font-size: 20px;
+          margin-top: 112px;
           margin-left: 0px;
           &-lorem{
-            font-size: 30px;
+            font-size: 28px;
             width: 100%;
+            letter-spacing: 0.7px;
+            line-height: 35px;
           }
           &-check{
-            top:-20%;
-            left: 45%;
+            top: -35%;
+            left: 46%;
+            transform: scale(1.5);
           }
         }
       }
     }
 
     .footer{
+      padding-top: 28px;
+      padding-bottom: 75px;
       text-align: center;
       &__item{
         min-height: 100px;
+        span{
+          position: absolute;
+          top: 310%;
+          left: 49%;
+          transform: translateX(-50%);
+          font-size: 15px;
+        }
+        &:nth-child(3){
+          margin-top: -15px;
+        }
       }
       img{
-        width: 80%;
+        width: 220px;
+        margin-top: 2px;
+        margin-left: -18px;
         margin-bottom: 10px;
       }
       .list{
@@ -1489,17 +1534,32 @@ main {
         padding: 0;
         text-align: center;
         line-height: normal;
+        &__item{
+          font-size: 12px;
+          width: 60%;
+          margin: auto;
+          margin-bottom: 16px;
+        }
       }
       .call{
         padding: 0;
         margin: auto;
+        transform: scale(0.7);
+        margin-top: -36px;
+        margin-left: -12px;
         img{
-          width: 15%;
+          width: 13%;
+          margin-left: 38px;
+          margin-top: 4px;
         }
       }
       .text{
         &__number{
           font-size: 28px;
+        }
+        &__lorem{
+          width: 110%;
+          padding-left: 0px;
         }
       }
     }

@@ -31,7 +31,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 17px;
     max-width: 1170px; }
     header .header .logo {
       height: 70px;
@@ -577,12 +576,12 @@ main {
   main .condition-sliders__button-minus {
     width: 60px;
     height: 60px;
-    padding-top: 17px;
+    padding-top: 25px;
     transform: scale(0.9); }
   main .condition-sliders__button-plus {
     width: 60px;
     height: 60px;
-    padding-top: 23px;
+    padding-top: 26px;
     transform: scale(0.9); }
   main .condition-sliders__text {
     transform: translateY(-15px);
@@ -595,10 +594,11 @@ main {
     main .loan .option-money {
       width: 70%;
       margin: auto !important;
-      padding-left: 0px !important; }
+      padding-left: 50px !important; }
   main .calculations {
     margin: auto; }
     main .calculations__text {
+      padding-left: 0px !important;
       margin-left: 40px !important; }
     main .calculations__button-take-money {
       margin: 40px auto !important;
@@ -782,24 +782,26 @@ main {
         margin: -39px auto -2px auto !important;
         padding: 0 !important;
         max-width: 90%; }
-      .advantages .features img {
-        height: 110px;
-        margin-bottom: 25px; }
-      .advantages .features span {
-        margin-top: -10px !important;
-        font-size: 20px !important;
-        line-height: 24px !important; }
+        .advantages .features__item-third {
+          margin-top: -27px !important; }
+        .advantages .features__item img {
+          height: 110px;
+          margin-bottom: 25px; }
+        .advantages .features__item span {
+          margin-top: -10px !important;
+          font-size: 20px !important;
+          line-height: 24px !important; }
   .about {
     margin-left: 0px;
     margin-bottom: 0px; }
     .about__marks-up {
-      top: -5%;
-      left: 8%; }
+      top: -2%;
+      left: -4%; }
     .about__marks-down {
       top: 90%;
-      left: 69%; }
+      left: 75%; }
     .about__header {
-      margin-top: 72px !important; }
+      margin-top: 58px !important; }
       .about__header h2 {
         width: 50%;
         margin: auto;
@@ -813,7 +815,7 @@ main {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      padding: 50px 20px 70px 20px;
+      padding: 62px 20px 70px 20px;
       text-align: center; }
       .about .carousel__item div {
         margin-top: 0px; }
@@ -822,18 +824,23 @@ main {
         margin-bottom: 20px; }
       .about .carousel__item p {
         margin: auto;
-        font-size: 28px; }
+        margin-top: -2px;
+        margin-left: 29px;
+        font-size: 22px; }
       .about .carousel__item span {
-        font-size: 20px; }
+        font-size: 21px;
+        margin-top: 11px;
+        margin-left: -18px; }
     .about .carousel__text {
       width: 140%;
-      margin-top: 20px !important; }
+      margin-top: 15px !important; }
   .company {
-    margin-top: 0px; }
+    margin-top: -15px;
+    padding-bottom: 39px !important; }
     .company__header {
       font-size: 24px;
       margin: auto;
-      padding: 27px 0px 13px 0px; }
+      padding: 33px 0px 0px 0px; }
     .company .wrap {
       display: flex;
       flex-direction: column; }
@@ -848,85 +855,131 @@ main {
         margin: auto;
         transform: scale(0.5);
         margin-left: 0px !important;
-        margin-right: 0px !important; }
+        margin-right: 0px !important;
+        margin-top: 10px; }
         .company .wrap__item::before {
           display: none; }
         .company .wrap__item-long {
           width: auto; }
           .company .wrap__item-long::before {
             display: none; }
-        .company .wrap__item:nth-child(3) .card-company__text {
-          margin-left: 0px;
-          margin-bottom: 0px; }
-          .company .wrap__item:nth-child(3) .card-company__text-check {
-            top: -23%; }
-        .company .wrap__item:nth-child(3) .image img {
-          padding-left: 0 !important; }
-        .company .wrap__item:nth-child(4) .card-company__text {
-          margin-left: 0px;
-          margin-bottom: 0px; }
-          .company .wrap__item:nth-child(4) .card-company__text-lorem {
-            width: 100%; }
-        .company .wrap__item:nth-child(4) .image img {
-          padding-left: 0 !important; }
+        .company .wrap__item:nth-child(2) {
+          margin-top: -6px; }
+          .company .wrap__item:nth-child(2) .card-company__text {
+            width: 145% !important; }
+            .company .wrap__item:nth-child(2) .card-company__text-check {
+              top: -29%; }
+        .company .wrap__item:nth-child(3) {
+          margin-top: -17px; }
+          .company .wrap__item:nth-child(3) .card-company__text {
+            margin-left: 0px;
+            margin-bottom: 0px;
+            margin-top: 99px; }
+            .company .wrap__item:nth-child(3) .card-company__text-check {
+              top: -41%; }
+          .company .wrap__item:nth-child(3) .image img {
+            padding-left: 0 !important; }
+        .company .wrap__item:nth-child(4) {
+          margin-top: -9px; }
+          .company .wrap__item:nth-child(4) .card-company__text {
+            margin-left: 0px;
+            margin-bottom: 0px; }
+            .company .wrap__item:nth-child(4) .card-company__text-lorem {
+              width: 100%; }
+          .company .wrap__item:nth-child(4) .image img {
+            padding-left: 0 !important; }
         .company .wrap__item:nth-child(5) .card-company__text {
           margin-left: 0px;
           margin-bottom: 0px; }
           .company .wrap__item:nth-child(5) .card-company__text-check {
-            left: 45%;
-            top: -23%; }
+            left: 46%;
+            top: -34%; }
           .company .wrap__item:nth-child(5) .card-company__text-lorem {
             width: 100%; }
         .company .wrap__item:nth-child(5) .image img {
           padding-left: 0 !important; }
-        .company .wrap__item:nth-child(6) .card-company__text {
-          margin-left: 0px;
-          margin-bottom: 0px; }
-          .company .wrap__item:nth-child(6) .card-company__text-check {
-            top: -23%; }
-          .company .wrap__item:nth-child(6) .card-company__text-lorem {
-            width: 100%; }
-        .company .wrap__item:nth-child(6) .image img {
-          padding-left: 0 !important; }
-        .company .wrap__item:nth-child(7) .card-company__text {
-          margin-left: 0px;
-          margin-bottom: 0px; }
-          .company .wrap__item:nth-child(7) .card-company__text-check {
-            left: 45%;
-            top: -17%; }
-          .company .wrap__item:nth-child(7) .card-company__text-lorem {
-            width: 100%; }
-        .company .wrap__item:nth-child(7) .image img {
-          padding-left: 0 !important; }
+        .company .wrap__item:nth-child(6) {
+          margin-top: -23px; }
+          .company .wrap__item:nth-child(6) .card-company__text {
+            margin-left: 0px;
+            margin-bottom: 0px; }
+            .company .wrap__item:nth-child(6) .card-company__text-check {
+              top: -35%; }
+            .company .wrap__item:nth-child(6) .card-company__text-lorem {
+              width: 100%; }
+          .company .wrap__item:nth-child(6) .image img {
+            padding-left: 0 !important; }
+        .company .wrap__item:nth-child(7) {
+          margin-top: 9px; }
+          .company .wrap__item:nth-child(7) .card-company__text {
+            width: 117% !important;
+            margin-left: 0px;
+            margin-bottom: 0px; }
+            .company .wrap__item:nth-child(7) .card-company__text-check {
+              left: 46%;
+              top: -22%; }
+            .company .wrap__item:nth-child(7) .card-company__text-lorem {
+              width: 100%; }
+          .company .wrap__item:nth-child(7) .image img {
+            padding-left: 0 !important; }
     .company .card-company__text {
-      width: 100% !important;
+      width: 150% !important;
       font-size: 20px;
+      margin-top: 112px;
       margin-left: 0px; }
       .company .card-company__text-lorem {
-        font-size: 30px;
-        width: 100%; }
+        font-size: 28px;
+        width: 100%;
+        letter-spacing: 0.7px;
+        line-height: 35px; }
       .company .card-company__text-check {
-        top: -20%;
-        left: 45%; }
+        top: -35%;
+        left: 46%;
+        transform: scale(1.5); }
   .footer {
+    padding-top: 28px;
+    padding-bottom: 75px;
     text-align: center; }
     .footer__item {
       min-height: 100px; }
+      .footer__item span {
+        position: absolute;
+        top: 310%;
+        left: 49%;
+        transform: translateX(-50%);
+        font-size: 15px; }
+      .footer__item:nth-child(3) {
+        margin-top: -15px; }
     .footer img {
-      width: 80%;
+      width: 220px;
+      margin-top: 2px;
+      margin-left: -18px;
       margin-bottom: 10px; }
     .footer .list {
       margin: 0 !important;
       padding: 0;
       text-align: center;
       line-height: normal; }
+      .footer .list__item {
+        font-size: 12px;
+        width: 60%;
+        margin: auto;
+        margin-bottom: 16px; }
     .footer .call {
       padding: 0;
-      margin: auto; }
+      margin: auto;
+      transform: scale(0.7);
+      margin-top: -36px;
+      margin-left: -12px; }
       .footer .call img {
-        width: 15%; }
+        width: 13%;
+        margin-left: 38px;
+        margin-top: 4px; }
     .footer .text__number {
       font-size: 28px; }
+    .footer .text__lorem {
+      width: 110%;
+      padding-left: 0px; }
   .next {
     width: 20px !important;
     top: 114% !important;
