@@ -27,7 +27,7 @@ header {
   background-color: #FF182F; }
   header .header {
     position: relative;
-    height: 135px;
+    height: 122px;
     display: flex;
     justify-content: space-between;
     align-items: center;
