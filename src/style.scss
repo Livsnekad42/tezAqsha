@@ -1143,10 +1143,470 @@ main {
     }
 }
 
+@media (min-width: 426px) and (max-width: 568px){
+  header {
+    position: relative;
+    .header {
+      height: 195px;
+      .logo {
+        position: absolute;
+        top: 14%;
+        left: 50%;
+        transform: translateX(-50%) scale(1.3);
+        height: 43px;
+        width: auto;
+        margin-left: 0px;
+        margin-top: 10px;
+      }
 
-@media(max-width:568px){
+      .button-take {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(42%) scale(1.4);
+        height: 40px;
+        width: 205px;
+        font-size: 20px;
+      }
+    }
+  }
 
 
+  main {
+    height: auto;
+
+    .condition-sliders{
+      .row{
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: -8px;
+      }
+      &__input{
+        width: 60%;
+        height: 10px;
+        margin: auto;
+        padding: 0;
+        &::-webkit-slider-thumb {
+          width: 35px;
+          height: 35px;
+        }
+      }
+      &__button{
+        &-minus{
+          width: 45px;
+          height: 45px;
+          padding-top: 17px;
+          transform: scale(0.9);
+          font-size: 65px;
+        }
+        &-plus{
+          width: 45px;
+          height: 45px;
+          padding-top: 18px;
+          transform: scale(0.9);
+          font-size: 45px;
+        }
+      }
+      &__text{
+        padding: 0;
+        transform: translateY(-15px);
+        font-size: 18px;
+        margin-left: 0px;
+      }
+      &__value{
+        padding: 0;
+        margin: 0;
+        transform: translateY(-15px);
+        font-size: 18px;
+      }
+    }
+
+  .loan {
+    width: 76%;
+    margin-top: 15px;
+      // .loan__item
+    &__item {
+      margin-bottom: 45px;
+      padding: 0;
+    }
+    .option-money {
+      width: auto;
+      height: auto;
+      margin: 46px auto 0px auto;
+      padding: 0px 20px;
+    }
+  }
+  .calculations {
+    margin: 23px auto;
+    &__text{
+      padding: 0;
+      letter-spacing: 0px;
+      font-size: 14px;
+      margin-left: 23px !important;
+      margin-top: 16px;
+      line-height: 3px;
+    }
+    // .calculations__button-take-money
+
+    &__button-take-money {
+      margin: 28px auto !important;
+      width: 86% !important;
+      height: 50px;
+      font-size: 16px;
+    }
+  }
+  }
+
+  .advantages {
+    padding-bottom: 60px;
+    .features {
+      padding-top: 50px !important;
+      flex-direction: column;
+        // .features__item
+        &__item {
+          margin: 26px auto 16px auto !important;
+          padding: 0 !important;
+          max-width: 60%;
+          &-third{
+            margin-top: 39px !important;
+          }
+          img{
+            height: 110px;
+            margin-bottom: 25px;
+          }
+          span {
+            margin-top: -10px !important;
+            font-size: 20px !important;
+            line-height: 24px !important;
+          }
+        }
+    }
+  }
+  
+
+    .about{
+      margin-left: 0px;
+      margin-bottom: 223px;
+      &__marks{
+        &-up{
+          transform: scale(1.5);
+          top: -3%;
+          left: 3%;
+        }
+        &-down{
+          transform: scale(1.5);
+          top: 90%;
+          left: 75%;
+        }
+      }
+      &__header{
+        margin-top: 58px !important;
+        h2{
+          width: 50%;
+          margin: auto;
+          font-size: 35px;
+        }
+      }
+      &__slider{
+        margin: auto;
+        margin-top: -87px;
+        transform: scale(0.7);
+      }
+      .carousel{
+        &__item{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          padding: 40px 20px 114px 20px;
+          text-align: center;
+          div{
+            margin-top: 0px;
+          }
+          img{
+            transform: scale(1.4);
+            margin: auto;
+            margin-bottom: 41px;
+            margin-top: 65px;
+          }
+          p{
+            margin: auto;
+            margin-top: -13px;
+            margin-left: 58px;
+            margin-bottom: 13px;
+            font-size: 28px;
+            letter-spacing: 3px;
+          }
+          span{
+            font-size: 29px !important;
+            margin-left: -18px;
+            margin-top: 2px;
+            line-height: 36px;
+          }
+        }
+        &__text{
+          width: 140%;
+          margin-top: 36px !important;
+          strong{
+            margin: auto;
+            margin-top: -8px;
+            margin-left: -14px;
+            margin-right: 10px;
+            font-size: 30px;
+            letter-spacing: 1px;
+          }
+        }
+      }  
+    }
+
+
+
+    .company{
+      margin-top: -15px;
+      padding-bottom: 39px !important;
+      &__header{
+        font-size: 34px;
+        margin: auto;
+        padding: 49px 0px 24px 0px;
+      }
+      .wrap{
+        display: flex;
+        flex-direction: column;
+        &__item{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-bottom: 20px;
+          text-align: center;
+          padding: 0px !important;
+          margin: auto;
+          transform: scale(0.5);
+          margin-left: 0px !important;
+          margin-right: 0px !important;
+          margin-top: 10px;
+          margin-bottom: 103px;
+          .image{
+              margin-top: 145px;
+              margin-bottom: 90px;
+            img{
+              transform: scale(1.5);
+            }
+          }
+          &::before{
+            display: none;
+          }
+          &-long{
+            width: auto;
+            &::before{
+              display: none;
+            }
+          }
+          &:nth-child(1){
+          
+          }
+          &:nth-child(2){
+            margin-top: -6px;
+            .card-company__text{
+              width: 145% !important;
+              &-check{
+                top: -29%;
+              }
+            }
+          }
+          &:nth-child(3){
+            margin-top: -12px;
+            .card-company__text {
+              margin-left: 0px;
+              margin-bottom: 0px;
+              margin-top: 99px;
+              &-check{
+                top: -41%;
+              }
+            }
+            .image{
+              img{
+                padding-left: 0 !important;
+              }
+            }
+        }
+        &:nth-child(4){
+          margin-top: -9px;
+          .card-company__text {
+            margin-left: 0px;
+            margin-bottom: 0px;
+            &-lorem{
+              width: 100%;
+            }
+          }
+          .image{
+            img{
+              padding-left: 0 !important;
+            }
+          }
+      }
+      &:nth-child(5){
+        margin-top: 10px;
+        .card-company__text {
+          margin-left: 0px;
+          margin-bottom: 0px;
+          &-check{
+            left: 46%;
+            top: -34%;
+          }  
+          &-lorem{
+            width: 100%;
+          }
+        }
+        .image{
+          img{
+            padding-left: 0 !important;
+          }
+        }
+    }
+    &:nth-child(6){
+      margin-top: -23px;
+      .card-company__text {
+        margin-left: 0px;
+        margin-bottom: 0px;
+        &-check{
+          top: -35%;
+        }  
+        &-lorem{
+          width: 100%;
+        }
+      }
+      .image{
+        img{
+          padding-left: 0 !important;
+        }
+      }
+  }
+  &:nth-child(7){
+    margin-top: 9px;
+    .card-company__text {
+      width: 117% !important;
+      margin-left: 0px;
+      margin-bottom: 0px;
+      &-check{
+        left: 46%;
+        top: -22%;
+      }  
+      &-lorem{
+        width: 100%;
+      }
+    }
+    .image{
+      img{
+        padding-left: 0 !important;
+      }
+    }
+}
+      }
+    }
+      .card-company{
+        &__text{
+          width: 135% !important;
+          font-size: 20px;
+          margin-top: 112px;
+          margin-left: 0px;
+          &-lorem{
+            font-size: 41px;
+            width: 100%;
+            letter-spacing: -1px;
+            line-height: 50px;
+          }
+          &-check{
+            top: -35%;
+            left: 46%;
+            transform: scale(1.5);
+          }
+        }
+      }
+    }
+
+    .footer{
+      padding-top: 28px;
+      padding-bottom: 110px;
+      text-align: center;
+      &__item{
+        min-height: 100px;
+        span{
+          position: absolute;
+          top: 453%;
+          left: 48%;
+          transform: translateX(-50%);
+          font-size: 19px;
+        }
+        &:nth-child(3){
+          margin-top: -15px;
+        }
+      }
+      img{
+        width: 100%;
+        margin-top: 22px;
+        margin-left: -18px;
+        margin-bottom: 10px;
+      }
+      .list{
+        margin: 0 !important;
+        padding: 0;
+        text-align: center;
+        line-height: normal;
+        &__item{
+          font-size: 18px;
+          width: 60%;
+          margin: auto;
+          margin-bottom: 16px;
+          margin-top: 23px;
+        }
+      }
+      .call{
+        padding: 0;
+        margin: auto;
+        transform: scale(0.7);
+        margin-top: -36px;
+        margin-left: -12px;
+        img{
+          width: 13%;
+          margin-left: 30px;
+          margin-top: 65px;
+        }
+      }
+      .text{
+        &__number{
+          margin-top: 50px;
+          margin-left: 20px;
+          font-size: 41px;
+        }
+        &__lorem{
+          width: 110%;
+          padding-left: 0px;
+        }
+      }
+    }
+
+    .next{
+      width: 20px !important;
+      top: 109% !important;
+      right: 28% !important;
+      width: auto !important;
+      height: auto !important;
+    }
+    .prev{
+      width: 20px !important;
+      top: 109% !important;
+      left: 28% !important;
+      width: auto !important;
+      height: auto !important;
+    }
+
+}
+
+
+@media(max-width:425px){
   header {
     position: relative;
     .header {

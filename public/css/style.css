@@ -691,7 +691,337 @@ main {
   .next {
     right: -4% !important; } }
 
-@media (max-width: 568px) {
+@media (min-width: 426px) and (max-width: 568px) {
+  header {
+    position: relative; }
+    header .header {
+      height: 195px; }
+      header .header .logo {
+        position: absolute;
+        top: 14%;
+        left: 50%;
+        transform: translateX(-50%) scale(1.3);
+        height: 43px;
+        width: auto;
+        margin-left: 0px;
+        margin-top: 10px; }
+      header .header .button-take {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(42%) scale(1.4);
+        height: 40px;
+        width: 205px;
+        font-size: 20px; }
+  main {
+    height: auto; }
+    main .condition-sliders .row {
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: -8px; }
+    main .condition-sliders__input {
+      width: 60%;
+      height: 10px;
+      margin: auto;
+      padding: 0; }
+      main .condition-sliders__input::-webkit-slider-thumb {
+        width: 35px;
+        height: 35px; }
+    main .condition-sliders__button-minus {
+      width: 45px;
+      height: 45px;
+      padding-top: 17px;
+      transform: scale(0.9);
+      font-size: 65px; }
+    main .condition-sliders__button-plus {
+      width: 45px;
+      height: 45px;
+      padding-top: 18px;
+      transform: scale(0.9);
+      font-size: 45px; }
+    main .condition-sliders__text {
+      padding: 0;
+      transform: translateY(-15px);
+      font-size: 18px;
+      margin-left: 0px; }
+    main .condition-sliders__value {
+      padding: 0;
+      margin: 0;
+      transform: translateY(-15px);
+      font-size: 18px; }
+    main .loan {
+      width: 76%;
+      margin-top: 15px; }
+      main .loan__item {
+        margin-bottom: 45px;
+        padding: 0; }
+      main .loan .option-money {
+        width: auto;
+        height: auto;
+        margin: 46px auto 0px auto;
+        padding: 0px 20px; }
+    main .calculations {
+      margin: 23px auto; }
+      main .calculations__text {
+        padding: 0;
+        letter-spacing: 0px;
+        font-size: 14px;
+        margin-left: 23px !important;
+        margin-top: 16px;
+        line-height: 3px; }
+      main .calculations__button-take-money {
+        margin: 28px auto !important;
+        width: 86% !important;
+        height: 50px;
+        font-size: 16px; }
+  .advantages {
+    padding-bottom: 60px; }
+    .advantages .features {
+      padding-top: 50px !important;
+      flex-direction: column; }
+      .advantages .features__item {
+        margin: 26px auto 16px auto !important;
+        padding: 0 !important;
+        max-width: 60%; }
+        .advantages .features__item-third {
+          margin-top: 39px !important; }
+        .advantages .features__item img {
+          height: 110px;
+          margin-bottom: 25px; }
+        .advantages .features__item span {
+          margin-top: -10px !important;
+          font-size: 20px !important;
+          line-height: 24px !important; }
+  .about {
+    margin-left: 0px;
+    margin-bottom: 223px; }
+    .about__marks-up {
+      transform: scale(1.5);
+      top: -3%;
+      left: 3%; }
+    .about__marks-down {
+      transform: scale(1.5);
+      top: 90%;
+      left: 75%; }
+    .about__header {
+      margin-top: 58px !important; }
+      .about__header h2 {
+        width: 50%;
+        margin: auto;
+        font-size: 35px; }
+    .about__slider {
+      margin: auto;
+      margin-top: -87px;
+      transform: scale(0.7); }
+    .about .carousel__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 40px 20px 114px 20px;
+      text-align: center; }
+      .about .carousel__item div {
+        margin-top: 0px; }
+      .about .carousel__item img {
+        transform: scale(1.4);
+        margin: auto;
+        margin-bottom: 41px;
+        margin-top: 65px; }
+      .about .carousel__item p {
+        margin: auto;
+        margin-top: -13px;
+        margin-left: 58px;
+        margin-bottom: 13px;
+        font-size: 28px;
+        letter-spacing: 3px; }
+      .about .carousel__item span {
+        font-size: 29px !important;
+        margin-left: -18px;
+        margin-top: 2px;
+        line-height: 36px; }
+    .about .carousel__text {
+      width: 140%;
+      margin-top: 36px !important; }
+      .about .carousel__text strong {
+        margin: auto;
+        margin-top: -8px;
+        margin-left: -14px;
+        margin-right: 10px;
+        font-size: 30px;
+        letter-spacing: 1px; }
+  .company {
+    margin-top: -15px;
+    padding-bottom: 39px !important; }
+    .company__header {
+      font-size: 34px;
+      margin: auto;
+      padding: 49px 0px 24px 0px; }
+    .company .wrap {
+      display: flex;
+      flex-direction: column; }
+      .company .wrap__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 20px;
+        text-align: center;
+        padding: 0px !important;
+        margin: auto;
+        transform: scale(0.5);
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        margin-top: 10px;
+        margin-bottom: 103px; }
+        .company .wrap__item .image {
+          margin-top: 145px;
+          margin-bottom: 90px; }
+          .company .wrap__item .image img {
+            transform: scale(1.5); }
+        .company .wrap__item::before {
+          display: none; }
+        .company .wrap__item-long {
+          width: auto; }
+          .company .wrap__item-long::before {
+            display: none; }
+        .company .wrap__item:nth-child(2) {
+          margin-top: -6px; }
+          .company .wrap__item:nth-child(2) .card-company__text {
+            width: 145% !important; }
+            .company .wrap__item:nth-child(2) .card-company__text-check {
+              top: -29%; }
+        .company .wrap__item:nth-child(3) {
+          margin-top: -12px; }
+          .company .wrap__item:nth-child(3) .card-company__text {
+            margin-left: 0px;
+            margin-bottom: 0px;
+            margin-top: 99px; }
+            .company .wrap__item:nth-child(3) .card-company__text-check {
+              top: -41%; }
+          .company .wrap__item:nth-child(3) .image img {
+            padding-left: 0 !important; }
+        .company .wrap__item:nth-child(4) {
+          margin-top: -9px; }
+          .company .wrap__item:nth-child(4) .card-company__text {
+            margin-left: 0px;
+            margin-bottom: 0px; }
+            .company .wrap__item:nth-child(4) .card-company__text-lorem {
+              width: 100%; }
+          .company .wrap__item:nth-child(4) .image img {
+            padding-left: 0 !important; }
+        .company .wrap__item:nth-child(5) {
+          margin-top: 10px; }
+          .company .wrap__item:nth-child(5) .card-company__text {
+            margin-left: 0px;
+            margin-bottom: 0px; }
+            .company .wrap__item:nth-child(5) .card-company__text-check {
+              left: 46%;
+              top: -34%; }
+            .company .wrap__item:nth-child(5) .card-company__text-lorem {
+              width: 100%; }
+          .company .wrap__item:nth-child(5) .image img {
+            padding-left: 0 !important; }
+        .company .wrap__item:nth-child(6) {
+          margin-top: -23px; }
+          .company .wrap__item:nth-child(6) .card-company__text {
+            margin-left: 0px;
+            margin-bottom: 0px; }
+            .company .wrap__item:nth-child(6) .card-company__text-check {
+              top: -35%; }
+            .company .wrap__item:nth-child(6) .card-company__text-lorem {
+              width: 100%; }
+          .company .wrap__item:nth-child(6) .image img {
+            padding-left: 0 !important; }
+        .company .wrap__item:nth-child(7) {
+          margin-top: 9px; }
+          .company .wrap__item:nth-child(7) .card-company__text {
+            width: 117% !important;
+            margin-left: 0px;
+            margin-bottom: 0px; }
+            .company .wrap__item:nth-child(7) .card-company__text-check {
+              left: 46%;
+              top: -22%; }
+            .company .wrap__item:nth-child(7) .card-company__text-lorem {
+              width: 100%; }
+          .company .wrap__item:nth-child(7) .image img {
+            padding-left: 0 !important; }
+    .company .card-company__text {
+      width: 135% !important;
+      font-size: 20px;
+      margin-top: 112px;
+      margin-left: 0px; }
+      .company .card-company__text-lorem {
+        font-size: 41px;
+        width: 100%;
+        letter-spacing: -1px;
+        line-height: 50px; }
+      .company .card-company__text-check {
+        top: -35%;
+        left: 46%;
+        transform: scale(1.5); }
+  .footer {
+    padding-top: 28px;
+    padding-bottom: 110px;
+    text-align: center; }
+    .footer__item {
+      min-height: 100px; }
+      .footer__item span {
+        position: absolute;
+        top: 453%;
+        left: 48%;
+        transform: translateX(-50%);
+        font-size: 19px; }
+      .footer__item:nth-child(3) {
+        margin-top: -15px; }
+    .footer img {
+      width: 100%;
+      margin-top: 22px;
+      margin-left: -18px;
+      margin-bottom: 10px; }
+    .footer .list {
+      margin: 0 !important;
+      padding: 0;
+      text-align: center;
+      line-height: normal; }
+      .footer .list__item {
+        font-size: 18px;
+        width: 60%;
+        margin: auto;
+        margin-bottom: 16px;
+        margin-top: 23px; }
+    .footer .call {
+      padding: 0;
+      margin: auto;
+      transform: scale(0.7);
+      margin-top: -36px;
+      margin-left: -12px; }
+      .footer .call img {
+        width: 13%;
+        margin-left: 30px;
+        margin-top: 65px; }
+    .footer .text__number {
+      margin-top: 50px;
+      margin-left: 20px;
+      font-size: 41px; }
+    .footer .text__lorem {
+      width: 110%;
+      padding-left: 0px; }
+  .next {
+    width: 20px !important;
+    top: 109% !important;
+    right: 28% !important;
+    width: auto !important;
+    height: auto !important; }
+  .prev {
+    width: 20px !important;
+    top: 109% !important;
+    left: 28% !important;
+    width: auto !important;
+    height: auto !important; } }
+
+@media (max-width: 425px) {
   header {
     position: relative; }
     header .header .logo {
