@@ -17,90 +17,187 @@
 
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="./public/css/style.css">
 
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link rel="stylesheet" type="text/css" href="./src/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="./src/slick/slick-theme.css"/>
 
 </head>
 
 <body>
-    <!-- HEADER -->
+<!-- HEADER -->
 
-    <header>
-            <div class="container header">
-                <img src="./src/img/logo.png" alt="logo" class="logo">
-                <button class="button-take">Взять заём</button>
+<header>
+    <div class="container header">
+        <img src="./src/img/logo.png" alt="logo" class="logo">
+        <button class="button-take" id="button-take">Взять заём</button>
+        <div id="modal-wrap" style="display: none">
+            <div id="modal-auth-select">
+                <div class="wrap">
+                    <h4>Выберите<br> способ авторизации</h4>
+                    <button id="auth-phone-button" class="red-button">По номеру телефона</button>
+                    <button id="auth-login-button" class="blue-button">Логин и пароль</button>
+                </div>
             </div>
-    </header>
+            <div id="modal-auth-phone">
+                <div class="wrap">
+                    <h4>По номеру телефона</h4>
+                    <label for="login-phone-sms">
+                        Введите номер телефона
+                        <input type="number" id="login-phone-sms" placeholder="+7">
+                    </label>
+                    <button id="modal-send-sms-enter" class="red-button">Отправить смс с кодом</button>
+                </div>
+            </div>
+            <div id="modal-auth-login">
+                <div class="wrap">
+                    <h4>Логин и пароль</h4>
+                    <label for="login" style="width: 100%;">Введите данные</label>
+                    <input type="text" placeholder="Имя пользователя" id="login">
+                    <input type="password" placeholder="Пароль" id="password">
+                    <div class="remember">
+                        <div class="rem">
+                            <input type="checkbox" name="checkbox-remember" id="checkbox-remember">
+                            <label for="checkbox-remember">
+                                Запомнить меня
+                            </label>
+                        </div>
+                        <a href="#">Забыли пароль?</a>
+                    </div>
+                    <button id="modal-auth-login-enter" class="red-button">Войти</button>
+                </div>
+            </div>
+            <div id="modal-auth-restore">
+                <div class="wrap">
+                    <h4>Восстановление пароля</h4>
+                    <p>Введите номер телефона и укажите дату рождения, которую Вы указывали при регистрации</p>
+                    <button class="blue-button">Через смс</button>
+                    <label for="login-phone-restore">
+                        Введите номер телефона
+                        <input type="number" id="login-phone-restore" placeholder="+7(">
+                    </label>
+                    <label for="login-date-restore">
+                        <input type="number" id="login-date-restore" placeholder="дд.мм.гггг">
+                    </label>
+                    <button id="restore-password" class="red-button">Восстановить пароль</button>
+                </div>
+            </div>
+            <div id="modal-auth-sms">
+                <div class="wrap">
+                    <h4>Код из смс</h4>
+                    <input type="number" id="login-auth-phone-sms" placeholder="Введите код из смс">
+                    <div class="myWrap">
+                        <button id="modal-auth-sms-enter" class="red-button">ок</button>
+                        <button id="modal-auth-sms-cancel" class="blue-button" onclick="closeWindow()">отмена</button>
+                    </div>
+                </div>
+            </div>
+            <div id="modal-auth-sms-restore">
+                <div class="wrap">
+                    <h4>Код из смс</h4>
+                    <input type="number" id="login-restore-phone-sms" placeholder="Введите код из смс">
+                    <div class="myWrap">
+                        <button id="modal-restore-sms-enter" class="red-button">ок</button>
+                        <button id="modal-restore-sms-cancel" class="blue-button" onclick="closeWindow()">отмена</button>
+                    </div>
+                </div>
+            </div>
+            <div id="modal-auth-sms-win">
+                <div class="wrap">
+                    <img src="src/img/sms.png" alt="">
+                    <h4>СМС отправлено</h4>
+                </div>
+            </div>
+            <div id="modal-auth-sms-fail">
+                <div class="wrap">
+                    <img src="src/img/warning.png" alt="">
+                    <h4>Проверьте введенные данные или обратитесь в поддержку</h4>
+                </div>
+            </div>
+            <div id="modal-auth-error">
+                <div class="wrap">
+                    <img src="src/img/warning.png" alt="">
+                    <h4>Введите корректные данные</h4>
+                </div>
+            </div>
+            <div id="modal-sms-sent">
+                <div class="wrap">
+                    <img src="src/img/sms.png" alt="">
+                    <h4>Смс была отправлена на ваш номер. Если вы не получили смс, пожалуйста, ещё раз проверьте введённые данные.</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 
 
-    <!-- MAIN SECTION -->
+<!-- MAIN SECTION -->
 
-    <main>
-        <div class="loan container">
+<main>
+    <div class="loan container">
 
-            <!-- SLIDERS -->
+        <!-- SLIDERS -->
 
-            <div class="option-money row">
+        <div class="option-money row">
 
             <!-- FIRST SLIDER -->
 
-                <div class="loan__item  condition-sliders col-12">
-                    <div class="row">
-                        <div class="condition-sliders__text col-6">
-                            СУММА ЗАЙМА
-                        </div>
-                        <div class="condition-sliders__value col-6">
-                            100 000 тенге
-                        </div>
+            <div class="loan__item  condition-sliders col-12">
+                <div class="row">
+                    <div class="condition-sliders__text col-6">
+                        СУММА ЗАЙМА
                     </div>
-                    <div class="row">
-                        <button class="condition-sliders__button-minus"> - </button>
-                        <input type="range" class="condition-sliders__input" min="1" max="100000" step="500" value="100000">
-                        <button class="condition-sliders__button-plus"> + </button>
+                    <div class="condition-sliders__value col-6">
+                        100 000 тенге
                     </div>
                 </div>
+                <div class="row">
+                    <button class="condition-sliders__button-minus"> - </button>
+                    <input type="range" class="condition-sliders__input" min="1" max="100000" step="500" value="100000">
+                    <button class="condition-sliders__button-plus"> + </button>
+                </div>
+            </div>
 
             <!-- SECOND SLIDER -->
 
-                <div class="loan__item loan__item-down condition-sliders col-12">
-                    <div class="row">
-                        <div class="condition-sliders__text col-6">
-                            СРОК ЗАЙМА
-                        </div>
-                        <div class="condition-sliders__value col-6">
-                            30 дней
-                        </div>
+            <div class="loan__item loan__item-down condition-sliders col-12">
+                <div class="row">
+                    <div class="condition-sliders__text col-6">
+                        СРОК ЗАЙМА
                     </div>
-                    <div class="row">
-                        <button class="condition-sliders__button-minus"> - </button>
-                        <input type="range" class="condition-sliders__input" min='1' max="60">
-                        <button class="condition-sliders__button-plus"> + </button>
+                    <div class="condition-sliders__value col-6">
+                        30 дней
                     </div>
                 </div>
-
-                
+                <div class="row">
+                    <button class="condition-sliders__button-minus"> - </button>
+                    <input type="range" class="condition-sliders__input" min='1' max="60">
+                    <button class="condition-sliders__button-plus"> + </button>
+                </div>
             </div>
 
-            <!-- CALCULATIONS -->
-
-            <div class="loan__item calculations row col-xl-10 offset-xl-1 col-12">
-                <p class="calculations__text">Возвращаете: <strong>125 000 тнг.</strong> </p>
-                <p class="calculations__text calculations__text-data">Дата возврата: <strong>26 сентября 2020, среда</strong></p>
-                <button class="calculations__button-take-money">Получить деньги</button>
-            </div>
 
         </div>
-    </main>
 
-    <!-- FEATURES -->
+        <!-- CALCULATIONS -->
 
-    <section class="advantages">
-        <div class="container">
-           <div class="features">
+        <div class="loan__item calculations row col-xl-10 offset-xl-1 col-12">
+            <p class="calculations__text">Возвращаете: <strong>125 000 тнг.</strong> </p>
+            <p class="calculations__text calculations__text-data">Дата возврата: <strong>26 сентября 2020, среда</strong></p>
+            <button class="calculations__button-take-money">Получить деньги</button>
+        </div>
+
+    </div>
+</main>
+
+<!-- FEATURES -->
+
+<section class="advantages">
+    <div class="container">
+        <div class="features">
             <div class="features__item col-xl-4 col-12">
                 <img src="./src/img/future/1.png" alt="feature1">
                 <span>Мы быстро рассмотрим Вашу заявку и примем решение о предоставлении денежных средств выбранным вами способом</span>
@@ -113,293 +210,394 @@
                 <img src="./src/img/future/3.png" alt="feature3">
                 <span>В TEZ AQSHA все условия получения займа открыты и прозрачны, Вам это понравится</span>
             </div>
-           </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ABOUT -->
+<!-- ABOUT -->
 
-    <div class="container">
-        <div class="about">
+<div class="container">
+    <div class="about">
 
-            <!-- ABOUTS -->
-            
-            <div class="about__header">
-                <h2>Отзывы клиентов</h2>
-            </div>
-            <div class="about__slider carousel">
+        <!-- ABOUTS -->
 
-                <div class="carousel__item">
-                    
-                        <div class="about__marks-up"></div>
-                        <div class="about__marks-down"></div>
-                    
-                    <img src="./src/img/about/photo.png" alt="Photo">
-                    <div class="carousel__text">
-                        <p>
-                            <strong>Индира</strong> 
-                            г.Алматы
-                        </p>
-                        <span>Сотрудники Тез Акша обслуживают вежливо и быстро. Оформила займ на 
-                            точке за 10 минут и пошла 
-                            с наличными домой!</span>
-                    </div>
-                </div>
+        <div class="about__header">
+            <h2>Отзывы клиентов</h2>
+        </div>
+        <div class="about__slider carousel">
 
-                <div class="carousel__item">
-                    
-                    <div class="about__marks-up"></div>
-                    <div class="about__marks-down"></div>
-                
+            <div class="carousel__item">
+
+                <div class="about__marks-up"></div>
+                <div class="about__marks-down"></div>
+
                 <img src="./src/img/about/photo.png" alt="Photo">
                 <div class="carousel__text">
                     <p>
-                        <strong>Индира</strong> 
+                        <strong>Индира</strong>
                         г.Алматы
                     </p>
-                    <span>Сотрудники Тез Акша обслуживают вежливо и быстро. Оформила займ на 
-                        точке за 10 минут и пошла 
-                        с наличными домой!</span>
+                    <span>Сотрудники Тез Акша обслуживают вежливо и быстро. Оформила займ на
+                            точке за 10 минут и пошла
+                            с наличными домой!</span>
                 </div>
-                </div>
+            </div>
 
-                <div class="carousel__item">
-                    
+            <div class="carousel__item">
+
                 <div class="about__marks-up"></div>
                 <div class="about__marks-down"></div>
-            
-            <img src="./src/img/about/photo.png" alt="Photo">
-            <div class="carousel__text">
-                <p>
-                    <strong>Индира</strong> 
-                    г.Алматы
-                </p>
-                <span>Сотрудники Тез Акша обслуживают вежливо и быстро. Оформила займ на 
-                    точке за 10 минут и пошла 
+
+                <img src="./src/img/about/photo.png" alt="Photo">
+                <div class="carousel__text">
+                    <p>
+                        <strong>Индира</strong>
+                        г.Алматы
+                    </p>
+                    <span>Сотрудники Тез Акша обслуживают вежливо и быстро. Оформила займ на
+                        точке за 10 минут и пошла
+                        с наличными домой!</span>
+                </div>
+            </div>
+
+            <div class="carousel__item">
+
+                <div class="about__marks-up"></div>
+                <div class="about__marks-down"></div>
+
+                <img src="./src/img/about/photo.png" alt="Photo">
+                <div class="carousel__text">
+                    <p>
+                        <strong>Индира</strong>
+                        г.Алматы
+                    </p>
+                    <span>Сотрудники Тез Акша обслуживают вежливо и быстро. Оформила займ на
+                    точке за 10 минут и пошла
                     с наличными домой!</span>
-            </div>
                 </div>
+            </div>
 
-                <div class="carousel__item">
-                    
-            <div class="about__marks-up"></div>
-            <div class="about__marks-down"></div>
-        
-        <img src="./src/img/about/photo.png" alt="Photo">
-        <div class="carousel__text">
-            <p>
-                <strong>Индира</strong> 
-                г.Алматы
-            </p>
-            <span>Сотрудники Тез Акша обслуживают вежливо и быстро. Оформила займ на 
-                точке за 10 минут и пошла 
+            <div class="carousel__item">
+
+                <div class="about__marks-up"></div>
+                <div class="about__marks-down"></div>
+
+                <img src="./src/img/about/photo.png" alt="Photo">
+                <div class="carousel__text">
+                    <p>
+                        <strong>Индира</strong>
+                        г.Алматы
+                    </p>
+                    <span>Сотрудники Тез Акша обслуживают вежливо и быстро. Оформила займ на
+                точке за 10 минут и пошла
                 с наличными домой!</span>
-        </div>
                 </div>
-
-                <div class="carousel__item">
-                    
-        <div class="about__marks-up"></div>
-        <div class="about__marks-down"></div>
-    
-    <img src="./src/img/about/photo.png" alt="Photo">
-    <div class="carousel__text">
-        <p>
-            <strong>Индира</strong> 
-            г.Алматы
-        </p>
-        <span>Сотрудники Тез Акша обслуживают вежливо и быстро. Оформила займ на 
-            точке за 10 минут и пошла 
-            с наличными домой!</span>
-    </div>
-                </div>      
-        </div>
-    </div>
-    </div>
-
-
-    <!-- COMPANY -->
-
-    <section class="company">
-        <div class="container">
-            <!-- HEADER -->
-
-            <div class="company__header">
-                О компании
             </div>
 
-            <div class="company__features wrap">
-                <div class="wrap__item card-company col-sm-6 col-md-12 col-lg-6 col-12">
-                    <div class="image">
-                        <img src="./src/img/company/icons/1.png" alt="company">
-                    </div>
-                    <div class="card-company__text">
-                        <span class="card-company__text-check"></span>
-                        <p class="card-company__text-lorem">
-                            Микрофинансовая компания 
-                            TEZ AQSHA предлагает своим 
-                            клиентам быстрое рассмотрение 
-                            заявок и выдачу денег
-                        </p>
-                    </div>
+            <div class="carousel__item">
+
+                <div class="about__marks-up"></div>
+                <div class="about__marks-down"></div>
+
+                <img src="./src/img/about/photo.png" alt="Photo">
+                <div class="carousel__text">
+                    <p>
+                        <strong>Индира</strong>
+                        г.Алматы
+                    </p>
+                    <span>Сотрудники Тез Акша обслуживают вежливо и быстро. Оформила займ на
+            точке за 10 минут и пошла
+            с наличными домой!</span>
                 </div>
-                <div class="wrap__item card-company col-sm-6 col-md-12 col-lg-6 col-12">
-                    <div class="image">
-                        <img src="./src/img/company/icons/2.png" alt="company">
-                    </div>
-                    <div class="card-company__text">
-                        <span class="card-company__text-check"></span>
-                        <p class="card-company__text-lorem">Организация работает с такими 
-                            организациями как ПКБ и ГКБ 
-                            и обещает индивидуальный 
-                            подход к каждому клиент, а также 
-                            высокий процент одобрения</p>
-                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- COMPANY -->
+
+<section class="company">
+    <div class="container">
+        <!-- HEADER -->
+
+        <div class="company__header">
+            О компании
+        </div>
+
+        <div class="company__features wrap">
+            <div class="wrap__item card-company col-sm-6 col-md-12 col-lg-6 col-12">
+                <div class="image">
+                    <img src="./src/img/company/icons/1.png" alt="company">
                 </div>
-                <div class="wrap__item card-company col-sm-6 col-md-12 col-lg-6 col-12">
-                    <div class="image">
-                        <img src="./src/img/company/icons/3.png" alt="company">
-                    </div>
-                    <div class="card-company__text">
-                        <span class="card-company__text-check"></span>
-                        <p class="card-company__text-lorem">
-                            Для получения займа в TEZ 
-                            AQSHA необходимо иметь при 
-                            cебе удостоверение личности 
-                            и прийти в одно из
-                            <span class="card-company__text-red">
+                <div class="card-company__text">
+                    <span class="card-company__text-check"></span>
+                    <p class="card-company__text-lorem">
+                        Микрофинансовая компания
+                        TEZ AQSHA предлагает своим
+                        клиентам быстрое рассмотрение
+                        заявок и выдачу денег
+                    </p>
+                </div>
+            </div>
+            <div class="wrap__item card-company col-sm-6 col-md-12 col-lg-6 col-12">
+                <div class="image">
+                    <img src="./src/img/company/icons/2.png" alt="company">
+                </div>
+                <div class="card-company__text">
+                    <span class="card-company__text-check"></span>
+                    <p class="card-company__text-lorem">Организация работает с такими
+                        организациями как ПКБ и ГКБ
+                        и обещает индивидуальный
+                        подход к каждому клиент, а также
+                        высокий процент одобрения</p>
+                </div>
+            </div>
+            <div class="wrap__item card-company col-sm-6 col-md-12 col-lg-6 col-12">
+                <div class="image">
+                    <img src="./src/img/company/icons/3.png" alt="company">
+                </div>
+                <div class="card-company__text">
+                    <span class="card-company__text-check"></span>
+                    <p class="card-company__text-lorem">
+                        Для получения займа в TEZ
+                        AQSHA необходимо иметь при
+                        cебе удостоверение личности
+                        и прийти в одно из
+                        <span class="card-company__text-red">
                                 отделений
                             </span>
-                        </p>
-                    </div>
+                    </p>
                 </div>
-                <div class="wrap__item card-company col-sm-6 col-md-12 col-lg-6 col-12">
-                    <div class="image">
-                        <img src="./src/img/company/icons/4.png" alt="company">
-                    </div>
-                    <div class="card-company__text">
-                        <span class="card-company__text-check"></span>
-                        <p class="card-company__text-lorem">
-                            Напоминаем, что вовремя 
-                            выполняя все условия по 
-                            договору клиент возвращает 
-                            только основной долг и 
-                            начисленное вознаграждение
-                        </p>
-                    </div>
-                </div>
-                <div class="wrap__item card-company col-sm-6 col-md-12 col-lg-6 col-12">
-                    <div class="image">
-                        <img src="./src/img/company/icons/5.png" alt="company">
-                    </div>
-                    <div class="card-company__text">
-                        <span class="card-company__text-check"></span>
-                        <p class="card-company__text-lorem">
-                            При досрочном погашении 
-                            займа клиенту необходимо 
-                            будет уплатить процент за 
-                            полный срок на который был 
-                            оформлен займ
-                        </p>
-                    </div>
-                </div>
-                <div class="wrap__item card-company col-sm-6 col-md-12 col-lg-6 col-12">
-                    <div class="image">
-                        <img src="./src/img/company/icons/6.png" alt="company">
-                    </div>
-                    <div class="card-company__text">
-                        <span class="card-company__text-check"></span>
-                        <p class="card-company__text-lorem">
-                            При невыполнении обязательств 
-                            к клиенту предъявляются 
-                            штрафные санкции за каждый 
-                            день невыполнения 
-                            обязательств
-                        </p>
-                    </div>
-                </div>
-                <div class="wrap__item wrap__item-long card-company col-12">
-                    <div class="image">
-                        <img src="./src/img/company/icons/7.png" alt="company">
-                    </div>
-                    <div class="card-company__text">
-                        <span class="card-company__text-check"></span>
-                        <p class="card-company__text-lorem">
-                            Более подробные условия клиент всегда 
-                            может уточнить позвонив на горячую линию 
-                            <strong class="card-company__text-lorem card-company__text-red">
-                                8 800 080 71 71
-                            </strong>
-                            или же прочитав 
-                            <a href="#" class="card-company__text-lorem card-company__text-red">
-                                правила предоставления микрокредитов
-                            </a>
-                        </p>
-                    </div>
-                </div> 
             </div>
-            
-        </div>
-    </section>
-
-
-    <!-- FOOTER -->
-
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer__item col-xl-4 col-12 col-lg-4">
-                    <img class="footer__img-logo" src="./src/img/logo.png" alt="logo">
-                    <span>@ 2020 TEZ AQSHA</span>
+            <div class="wrap__item card-company col-sm-6 col-md-12 col-lg-6 col-12">
+                <div class="image">
+                    <img src="./src/img/company/icons/4.png" alt="company">
                 </div>
-    
-                <div class="footer__item call col-xl-4 col-12 col-lg-4">
-                    <img src="./src/img/call.png" alt="call">
-                    <div class="text">
-                        <p class="text__number">
+                <div class="card-company__text">
+                    <span class="card-company__text-check"></span>
+                    <p class="card-company__text-lorem">
+                        Напоминаем, что вовремя
+                        выполняя все условия по
+                        договору клиент возвращает
+                        только основной долг и
+                        начисленное вознаграждение
+                    </p>
+                </div>
+            </div>
+            <div class="wrap__item card-company col-sm-6 col-md-12 col-lg-6 col-12">
+                <div class="image">
+                    <img src="./src/img/company/icons/5.png" alt="company">
+                </div>
+                <div class="card-company__text">
+                    <span class="card-company__text-check"></span>
+                    <p class="card-company__text-lorem">
+                        При досрочном погашении
+                        займа клиенту необходимо
+                        будет уплатить процент за
+                        полный срок на который был
+                        оформлен займ
+                    </p>
+                </div>
+            </div>
+            <div class="wrap__item card-company col-sm-6 col-md-12 col-lg-6 col-12">
+                <div class="image">
+                    <img src="./src/img/company/icons/6.png" alt="company">
+                </div>
+                <div class="card-company__text">
+                    <span class="card-company__text-check"></span>
+                    <p class="card-company__text-lorem">
+                        При невыполнении обязательств
+                        к клиенту предъявляются
+                        штрафные санкции за каждый
+                        день невыполнения
+                        обязательств
+                    </p>
+                </div>
+            </div>
+            <div class="wrap__item wrap__item-long card-company col-12">
+                <div class="image">
+                    <img src="./src/img/company/icons/7.png" alt="company">
+                </div>
+                <div class="card-company__text">
+                    <span class="card-company__text-check"></span>
+                    <p class="card-company__text-lorem">
+                        Более подробные условия клиент всегда
+                        может уточнить позвонив на горячую линию
+                        <strong class="card-company__text-lorem card-company__text-red">
                             8 800 080 71 71
-                        </p>
-                        <p class="text__lorem">
-                            <strong>call-center / </strong>
-                            звонок бесплатный
-                        </p>
-                    </div>
-                </div>
-    
-                <div class="footer__item footer__item-list col-xl-4 col-12 col-lg-4">
-                    <ul class="list">
-                        <li class="list__item">
-                            <a href="#">
-                                Правила предоставления микрозаймов
-                            </a>
-                        </li>
-                        <li class="list__item list__item-blue">
-                            <a href="#">
-                                Калькулятор займа
-                            </a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#">
-                                Отзывы клиентов
-                            </a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#">
-                                О компании
-                            </a>
-                        </li>
-                    </ul>
+                        </strong>
+                        или же прочитав
+                        <a href="#" class="card-company__text-lorem card-company__text-red">
+                            правила предоставления микрокредитов
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
-    </footer>
+
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer__item col-xl-4 col-12 col-lg-4">
+                <img class="footer__img-logo" src="./src/img/logo.png" alt="logo">
+                <span>@ 2020 TEZ AQSHA</span>
+            </div>
+
+            <div class="footer__item call col-xl-4 col-12 col-lg-4">
+                <img src="./src/img/call.png" alt="call">
+                <div class="text">
+                    <p class="text__number">
+                        8 800 080 71 71
+                    </p>
+                    <p class="text__lorem">
+                        <strong>call-center / </strong>
+                        звонок бесплатный
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer__item footer__item-list col-xl-4 col-12 col-lg-4">
+                <ul class="list">
+                    <li class="list__item">
+                        <a href="#">
+                            Правила предоставления микрозаймов
+                        </a>
+                    </li>
+                    <li class="list__item list__item-blue">
+                        <a href="#">
+                            Калькулятор займа
+                        </a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#">
+                            Отзывы клиентов
+                        </a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#">
+                            О компании
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
 
 
 
-    
-    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
-    <script src="./src/slick/slick.min.js"></script>
-    <script defer src="./src/script.js"></script>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+<script src="./src/slick/slick.min.js"></script>
+<script defer src="./src/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<script>
+
+    const loginURL = "http://app.tezlombard.kz/auth/loginApi/";
+    const smsSendURL = 'http://app.tezlombard.kz/auth/sendSmsApi/';
+    const smsConfirmURL = 'http://app.tezlombard.kz/auth/confirmApi/';
+    const tokenURL = 'http://app.tezlombard.kz?tokenApp=';
+    $('#button-take').click(function() {
+        $('#modal-auth-select').modal();
+    });
+    $('.calculations__button-take-money').click(function() {
+        $('#modal-auth-select').modal();
+    });
+
+    $('#auth-login-button').click(function() {
+        $('#modal-auth-login').modal();
+    });
+
+    $('#auth-phone-button').click(function() {
+        $('#modal-auth-phone').modal();
+    });
+
+    $('#modal-auth-login-enter').click(function() {
+        const login = $('#login').val();
+        const pass = $('#password').val();
+        $.ajax({
+            url: loginURL,
+            method: "POST",
+            data: {
+                phone: login,
+                password: pass,
+                app_name: "aqsha"
+            },
+            success: function (data, status, jqXHR) {
+                window.location.href = tokenURL + data.token_app;
+            },
+            error: function (jqXHR, status, error) {
+                $('#modal-auth-error').modal({
+                    closeExisting: false
+                })
+
+            }
+        });
+    });
+
+    $('#modal-send-sms-enter').click(function() {
+        const phone = $('#login-phone-sms').val();
+        $.ajax({
+            url: smsSendURL,
+            method: "POST",
+            data: {
+                phone: phone,
+                app_name: "aqsha"
+            },
+            success: function (data, status, jqXHR) {
+                console.log(JSON.stringify(data));
+                $('#modal-auth-sms').modal();
+                $('#modal-sms-sent').modal({
+                    closeExisting: false
+                });
+            },
+            error: function (jqXHR, status, error) {
+                $('#modal-auth-error').modal({
+                    closeExisting: false
+                })
+
+            }
+        });
+    });
+
+    $('#modal-auth-sms-enter').click(function() {
+        const phone = $('#login-phone-sms').val();
+        const code = $('#login-auth-phone-sms').val();
+        $.ajax({
+            url: smsConfirmURL,
+            method: "POST",
+            data: {
+                phone: phone,
+                confirmCode: code,
+                app_name: "aqsha"
+            },
+            success: function (data, status, jqXHR) {
+                window.location.href = tokenURL + data.token_app;
+            },
+            error: function (jqXHR, status, error) {
+                $('#modal-auth-sms-fail').modal({
+                    closeExisting: false
+                })
+
+            }
+        });
+    });
+
+
+    function closeWindow() {
+        $('#modal-auth-sms').css('display', 'none');
+        $('#modal-auth-sms-restore').css('display', 'none');
+        $('.blocker').css('display', 'none');
+    }
+
+</script>
 </body>
 
 </html>
