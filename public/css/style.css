@@ -1583,3 +1583,11 @@ input::-webkit-inner-spin-button {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAkUExURQAAAKmvts3Q1M3Q1c7R1aWqsKittL/Bx6Spr6ess77Cx9DV3iTQO/UAAAALdFJOUwDvCAgE3+xD3utDmSY8fQAAAHJJREFUCNdjKAthAAPXdIbsjQogFpP0Nobo3UIgpuLurQyOu0HCTNK7RUCEEEgQJAAiIXywMEQQJAwEYL0gYaggA4P27t2bICwG6927N0NYzCAFBgyo2oC6hA0h+oBmGkCsQLIYyTlwR+5AOH0nA9xDWQAvgjFxVwVfwgAAAABJRU5ErkJggg==') !important;
   height: 20px !important;
 }
+
+#modal-auth-restore {
+  max-height: 503px !important;
+}
+
+#modal-auth-restore label {
+  width: 100%;
+}

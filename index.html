@@ -65,7 +65,7 @@
                                 Запомнить меня
                             </label>
                         </div>
-                        <a href="#">Забыли пароль?</a>
+                        <a href="#" id="forget-password">Забыли пароль?</a>
                     </div>
                     <button id="modal-auth-login-enter" class="red-button">Войти</button>
                 </div>
@@ -74,13 +74,13 @@
                 <div class="wrap">
                     <h4>Восстановление пароля</h4>
                     <p>Введите номер телефона и укажите дату рождения, которую Вы указывали при регистрации</p>
-                    <button class="blue-button">Через смс</button>
+                    <button class="blue-button" id="bySMS">Через смс</button>
                     <label for="login-phone-restore">
                         Введите номер телефона
                         <input type="number" id="login-phone-restore" placeholder="+7(">
                     </label>
                     <label for="login-date-restore">
-                        <input type="number" id="login-date-restore" placeholder="дд.мм.гггг">
+                        <input type="text" id="login-date-restore" placeholder="дд.мм.гггг">
                     </label>
                     <button id="restore-password" class="red-button">Восстановить пароль</button>
                 </div>
@@ -503,12 +503,21 @@
     const loginURL = "http://app.tezlombard.kz/auth/loginApi/";
     const smsSendURL = 'http://app.tezlombard.kz/auth/sendSmsApi/';
     const smsConfirmURL = 'http://app.tezlombard.kz/auth/confirmApi/';
+    const restoreURL = 'http://app.tezlombard.kz/auth/recovery/';
     const tokenURL = 'http://app.tezlombard.kz?tokenApp=';
     $('#button-take').click(function() {
         $('#modal-auth-select').modal();
     });
     $('.calculations__button-take-money').click(function() {
         $('#modal-auth-select').modal();
+    });
+
+    $('#forget-password').click(function() {
+        $('#modal-auth-restore').modal();
+    });
+
+    $('#bySMS').click(function() {
+        $('#modal-auth-phone').modal();
     });
 
     $('#auth-login-button').click(function() {
@@ -580,6 +589,30 @@
             },
             success: function (data, status, jqXHR) {
                 window.location.href = tokenURL + data.token_app;
+            },
+            error: function (jqXHR, status, error) {
+                $('#modal-auth-sms-fail').modal({
+                    closeExisting: false
+                })
+
+            }
+        });
+    });
+
+    $('#restore-password').click(function() {
+        const birthDate = $('#login-date-restore').val();
+        const phone = $('#login-phone-restore').val();
+        $.ajax({
+            url: restoreURL,
+            method: "POST",
+            data: {
+                birthDate: birthDate,
+                phone: phone,
+                app_name: "aqsha"
+            },
+            success: function (data, status, jqXHR) {
+                $('#modal-auth-sms-win').modal();
+                setTimeout(function() {$('#modal-auth-login').modal()}, 4000);
             },
             error: function (jqXHR, status, error) {
                 $('#modal-auth-sms-fail').modal({
